@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/675ee43295.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <i id="openNav" class="fa-solid fa-bars open"></i>
+    <i id="closeNav" class="fa-solid fa-bars-staggered close"></i>
+
+
+    <div class="device">
+        <div class="screen">
+            <div class="imgHere">
+                <i class="fa-solid fa-image"></i>
+                <span>Image Here</span>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="logo"></div>
+        <nav id="nav">
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">SERVICES</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">TEAM</a></li>
+                <li><a href="">BLOG</a></li>
+                <li><a href="">LOGIN</a></li>
+                <li class="signUp"><a href="">SIGN UP</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="landingImgContainer">
+        <div class="text">
+            <h1>Inject Your Brand and Values into a Physical Space</h1>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid, iure, sequi aut provident alias
+                distinctio expedita quos culpa sit cum eligendi esse nemo ex officiis?
+            </p>
+            <div class="btns">
+                <div class="order">ORDER CONTENT</div>
+                <div class="create"> <i class="fa-solid fa-chevron-right"></i> CREATE AN ACCOUNT</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brandsContainer">
+        <div>
+            <i class="fa-brands fa-airbnb"></i>
+            <span>airbnb</span>
+        </div>
+        <div>
+            <i class="fa-brands fa-shopify"></i>
+            <span>Shopify</span>
+        </div>
+        <div>
+            <i class="fa-brands fa-salesforce"></i>
+        </div>
+        <div>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+        </div>
+        <div class="netflix">
+            <img src="data:image/png;base64,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"
+                alt="">
+        </div>
+        <div>
+            <i class="fa-brands fa-dropbox"></i>
+            <span>Dropbox</span>
+        </div>
+        <div>
+            <span>HUGE</span>
+        </div>
+    </section>
+
+    <section class="helpContainer">
+        <div class="left">
+            <p>HOW WE CAN HELP YOUR BUSINESS</p>
+            <h2>We are a Full-Service Marketing and design Firm</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit incidunt eaque, quas maxime molestiae
+                architecto consequatur exercitationem excepturi, labore maiores fugit. Ex officia voluptates facilis
+                nemo rem nihil repellat nulla.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi nulla doloribus voluptas possimus odio
+                placeat aperiam sed? Cupiditate odit voluptatum minus, incidunt ipsam praesentium inventore qui fugiat
+                error distinctio. Possimus totam officiis molestiae ea, eum vel facere enim, reiciendis recusandae autem
+                nemo ullam. Exercitationem natus fuga aliquam obcaecati dolores repellat!</p>
+            <div class="order">ORDER CONTENT</div>
+        </div>
+
+
+        <div class="right">
+            <div class="card">
+                <div class="img">
+                    <img src="./rainy.jpg" alt="">
+                </div>
+                <p>DIGITAL & SOCIAL MEDIA</p>
+                <p>Effective social media success takes effective all states</p>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./rainy.jpg" alt="">
+                </div>
+                <p>BRAND MARKETING</p>
+                <p>We provide branding from the insid-out panet</p>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./rainy.jpg" alt="">
+                </div>
+                <p>MEDIA BUYING</p>
+                <p>With extensive experience in working in the region</p>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./rainy.jpg" alt="">
+                </div>
+                <p>GRAPHIC & WEB DESIGN</p>
+                <p>As a brand marketing firm, helping your company</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="cloneContainer">
+        <div class="img">
+            <img src="./rainy.jpg" alt="">
+        </div>
+        <div class="right">
+            <p>UNLIKE ANY ADVERTISING AGENCY</p>
+            <h2>We are a Full-Service Marketing and design Firm</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit incidunt eaque, quas maxime molestiae
+                architecto consequatur exercitationem excepturi, labore maiores fugit. Ex officia voluptates facilis
+                nemo rem nihil repellat nulla.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi nulla doloribus voluptas possimus odio
+                placeat aperiam sed? Cupiditate odit voluptatum minus, incidunt ipsam praesentium inventore qui fugiat
+                error distinctio. Possimus totam officiis molestiae ea, eum vel facere enim, reiciendis recusandae autem
+                nemo ullam. Exercitationem natus fuga aliquam obcaecati dolores repellat!</p>
+            <div class="order">ORDER CONTENT</div>
+        </div>
+    </section>
+
+
+
+
+    <section class="hdiwContainer">
+        <h2 class="titleH2">How Does It Work!</h2>
+        <p class="titleP">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi nostrum fuga ipsum quod
+            quae, et mollitia
+            sint accusamus magnam sunt.</p>
+        <div class="container">
+            <div class="img">
+                <img src="./rainy.jpg" alt="">
+            </div>
+            <div class="right">
+                <p class="note">HOW WE CAN HELP YOUR BUSINESS</p>
+                <h2>We are a Full-Service Marketing and design Firm</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit incidunt eaque, quas maxime
+                    molestiae
+                    architecto consequatur exercitationem excepturi, labore maiores fugit. Ex officia voluptates
+                    facilis
+                    nemo rem nihil repellat nulla.</p>
+                <div class="checkboxContainer">
+                    <div class="box"></div>
+                    <div class="text">
+                        <p>FASTEST RESPONSE RATE</p>
+                        <p>Not only classes should be fun, but also their management</p>
+                    </div>
+                </div>
+                <div class="checkboxContainer">
+                    <div class="box"></div>
+                    <div class="text">
+                        <p>FASTEST RESPONSE RATE</p>
+                        <p>Not only fitness classes should be fun, but also their management</p>
+                    </div>
+                </div>
+                <div class="arrowContainer">
+                    <i class="fa-regular fa-circle-left"></i>
+                    <i class="fa-regular fa-circle-right"></i>
+                </div>
+                <div class="order">VIEW HOW IT WORKS</div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="createAccountContainer">
+        <div class="titleContainer">
+            <p class="note">CREATE AN ACCOUNT FOR FREE</p>
+            <h2>Core Features and Technologies List</h2>
+        </div>
+        <div class="container">
+            <div class="top">
+                <div class="card features">
+                    <a href="">VIEW ALL FEATURES</a>
+                </div>
+
+                <div class="card checkbox">
+                    <div class="box"></div>
+                    <p>ALLOWS US TO BE YOUR GUIDE</p>
+                    <p>Not only fitness classes should be fun, but also theri internal management</p>
+                </div>
+                <div class="card features">
+                    <a href="">VIEW ALL FEATURES</a>
+                </div>
+
+                <div class="card checkbox">
+                    <div class="box"></div>
+                    <p>ALLOWS US TO BE YOUR GUIDE</p>
+                    <p>Not only fitness classes should be fun, but also theri internal management</p>
+                </div>
+                <div class="card features">
+                    <a href="">VIEW ALL FEATURES</a>
+                </div>
+
+                <div class="card checkbox">
+                    <div class="box"></div>
+                    <p>ALLOWS US TO BE YOUR GUIDE</p>
+                    <p>Not only fitness classes should be fun, but also theri internal management</p>
+                </div>
+                <div class="card features">
+                    <a href="">VIEW ALL FEATURES</a>
+                </div>
+
+                <div class="card checkbox">
+                    <div class="box"></div>
+                    <p>ALLOWS US TO BE YOUR GUIDE</p>
+                    <p>Not only fitness classes should be fun, but also theri internal management</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="card features">
+                    <a href="">VIEW ALL FEATURES</a>
+                </div>
+
+                <div class="card checkbox">
+                    <div class="box"></div>
+                    <p>ALLOWS US TO BE YOUR GUIDE</p>
+                    <p>Not only fitness classes should be fun, but also theri internal management</p>
+                </div>
+                <div class="card features">
+                    <a href="">VIEW ALL FEATURES</a>
+                </div>
+
+                <div class="card checkbox">
+                    <div class="box"></div>
+                    <p>ALLOWS US TO BE YOUR GUIDE</p>
+                    <p>Not only fitness classes should be fun, but also theri internal management</p>
+                </div>
+                <div class="card features">
+                    <a href="">VIEW ALL FEATURES</a>
+                </div>
+
+                <div class="card checkbox">
+                    <div class="box"></div>
+                    <p>ALLOWS US TO BE YOUR GUIDE</p>
+                    <p>Not only fitness classes should be fun, but also theri internal management</p>
+                </div>
+                <div class="card features">
+                    <a href="">VIEW ALL FEATURES</a>
+                </div>
+
+                <div class="card checkbox">
+                    <div class="box"></div>
+                    <p>ALLOWS US TO BE YOUR GUIDE</p>
+                    <p>Not only fitness classes should be fun, but also theri internal management</p>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <section class="cloneContainer">
+        <div class="img">
+            <img src="./rainy.jpg" alt="">
+        </div>
+        <div class="right">
+            <p>We are a Solution-Based Marketing Compamy</p>
+            <h2>We are a Full-Service Marketing and design Firm</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit incidunt eaque, quas maxime molestiae
+                architecto consequatur exercitationem excepturi, labore maiores fugit. Ex officia voluptates facilis
+                nemo rem nihil repellat nulla.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi nulla doloribus voluptas possimus odio
+                placeat aperiam sed? Cupiditate odit voluptatum minus, incidunt ipsam praesentium inventore qui fugiat
+                error distinctio. Possimus totam officiis molestiae ea, eum vel facere enim, reiciendis recusandae autem
+                nemo ullam. Exercitationem natus fuga aliquam obcaecati dolores repellat!</p>
+            <div class="order">ORDER CONTENT</div>
+        </div>
+    </section>
+
+
+
+    <section class="reviewContainer">
+        <p>LOVE BY SOME OF BEST PEOPLE ON EARTH</p>
+        <div class="reviews">
+            <i class="fa-regular fa-circle-left"></i>
+            <p>Need high quality original content that is SEO optimized and verified for originality? Place an order
+                now,
+                and our creative wordsmiths are on it like dots on I's with all the necesary resources.</p>
+            <i class="fa-regular fa-circle-right"></i>
+        </div>
+        <div class="person">
+            <div class="img">
+                <img src="./50.jpg" alt="">
+            </div>
+            <div class="name">
+                <span>CHARLIZE THERON</span>
+                <span>CEO & Founder Uber</span>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer>
+        <div class="top">
+            <div class="text">
+                <p>PLACE AN ORDER NOW, AND OUR ALL GUYS</p>
+                <p>Take your team anywhere to go.</p>
+            </div>
+            <div class="btns">
+                <div class="order">ORDER CONTENT</div>
+                <div class="order">CONTACT US</div>
+            </div>
+        </div>
+        <div class="bottom">
+            <ul class="ccLTD">
+                <li class="title">CIRCLECIRCLE LTD</li>
+                <li>On our way to pffice, we start preparing for the day in our minds</li>
+                <li class="boxes"> <span class="box"></span> <span>Careers</span></li>
+                <li> <span class="box"></span> <span>+1 718 222 22 222</span></li>
+                <li> <span class="box"></span> <span>hello@circlecircle.com</span></li>
+            </ul>
+
+            <ul class="products">
+                <li class="title">Products</li>
+                <li>Messaging API</li>
+                <li><a href="">Content Pricing</a></li>
+                <li><a href="">Integrations</a></li>
+                <li><a href="">Channels</a></li>
+                <li><a href="">Documentation</a></li>
+                <li><a href="">API referance</a></li>
+            </ul>
+
+            <ul>
+                <li style="opacity: 0;">Products</li>
+                <li><a href="">API Libraries</a></li>
+                <li><a href="">Changelog</a></li>
+                <li><a href="">E-Books</a></li>
+                <li><a href="">Status</a></li>
+                <li><a href="">Blogs</a></li>
+                <li><a href="">Contact sales</a></li>
+            </ul>
+            <ul>
+                <li class="title">FOR USERS</li>
+                <li><a href="">Help Center</a></li>
+                <li><a href="">Learn More</a></li>
+                <li><a href="">Privacy & Terms</a></li>
+                <li><a href="">Prototyping</a></li>
+                <li><a href="">Sketch Business</a></li>
+            </ul>
+            <ul>
+                <li class="title">INFORMATION</li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">How it works</a></li>
+                <li><a href="">Platform Features</a></li>
+                <li><a href="">Platform Features</a></li>
+                <li><a href="">Our Copywriters</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Testimonials</a></li>
+            </ul>
+            <ul>
+                <li class="title">RESOURSES</li>
+                <li><a href="">Help Docs</a></li>
+                <li><a href="">FAQ's</a></li>
+                <li><a href="">Content Marketing Blog</a></li>
+                <li><a href="">Case Studies</a></li>
+                <li><a href="">Our Copywriters</a></li>
+                <li>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-salesforce"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-airbnb"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script>
+        const openNav = document.getElementById('openNav');
+        const closeNav = document.getElementById('closeNav');
+        const nav = document.getElementById('nav');
+
+        openNav.addEventListener('click', () => {
+            nav.style.top = "0vh";
+            openNav.style.zIndex = "-1";
+            closeNav.style.zIndex = "2";
+
+        })
+
+        closeNav.addEventListener('click', () => {
+            nav.style.top = "-100vh";
+            closeNav.style.zIndex = "-1";
+            openNav.style.zIndex = "2";
+        })
+    </script>
+</body>
+
+</html>

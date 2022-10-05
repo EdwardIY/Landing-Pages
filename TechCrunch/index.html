@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Your description goes here">
+    <meta name="keywords" content="one, two, three">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/675ee43295.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            box-sizing: border-box;
+            font-family: poppins;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            color: inherit;
+            font-size: inherit;
+            text-decoration: none;
+        }
+
+
+        img {
+            max-width: 100%;
+        }
+
+        h1,
+        h2,
+        p {
+            margin: 5px 0px;
+            line-height: 1.3em;
+        }
+
+        .toggle {
+            position: fixed;
+            display: none;
+            right: 6vw;
+            top: 1vw;
+            font-size: 30px;
+            z-index: 2;
+        }
+
+        .open {
+            margin-right: -250px !important;
+        }
+
+        .openNav {
+            opacity: 1 !important;
+            z-index: 1 !important;
+        }
+
+        .lightText {
+            opacity: .7;
+        }
+
+        .heavyText {
+            font-weight: 700;
+        }
+
+        .orange {
+            color: #f5a626
+        }
+
+        .top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            transition: all .3s;
+        }
+
+        .nav {
+            width: 13%;
+        }
+
+        main {
+            width: 50%;
+        }
+
+        aside {
+            width: 30%;
+        }
+
+
+        .nav {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+
+        .nav .login {
+            margin-bottom: 10px;
+        }
+
+        .nav ul li {
+            margin-bottom: 12px;
+            font-size: 20px;
+            font-weight: 300;
+            opacity: inherit;
+        }
+
+        .nav ul .bar {
+            height: 2px;
+            width: 30px;
+            background-color: black;
+            opacity: .5;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-self: flex-end;
+        }
+
+        aside {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px
+        }
+
+        aside div:nth-child(1),
+        aside div:nth-child(2),
+        aside div:nth-child(3) {
+            display: block;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.289);
+        }
+
+        .bottom {
+            width: 83.5%;
+            margin: auto;
+            margin-right: 0;
+            transition: .3s;
+        }
+
+        .bottom h3 {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+        }
+
+        .bottom .mainText {
+            display: flex;
+
+            gap: 50px;
+        }
+
+        .mainText .left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 30%;
+        }
+
+        .mainText .right {
+            width: 30%;
+        }
+
+        .mainText img {
+            width: 120%;
+        }
+
+        @media(max-width:1100px) {
+            .top {
+                justify-content: center;
+                gap: 20px 0px;
+            }
+
+            .bottom {
+                width: 90vw;
+                margin-right: 4.7%;
+            }
+
+            aside {
+                width: 90vw;
+            }
+
+            main {
+                align-self: initial;
+                width: 84%;
+            }
+        }
+
+        @media(max-width:900px) {
+            .toggle {
+                display: block;
+                cursor: pointer;
+            }
+
+            .top .nav {
+                position: fixed;
+                top: 0px;
+                left: 0vw;
+                width: 150px;
+                padding: .5em;
+                z-index: -1;
+                opacity: 0;
+                transition: .5s;
+            }
+
+            .top {
+                align-items: flex-end;
+            }
+
+            .top main {
+                width: 95vw;
+            }
+
+            .bottom .mainText {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .bottom .mainText .img {
+                order: 1;
+            }
+
+
+            .bottom .mainText .left {
+                order: 2;
+                width: 100%;
+            }
+
+            .bottom .mainText .right {
+                order: 3;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <i class="fa-solid fa-bars toggle orange" id="toggle"></i>
+    <section class="top section">
+        <section class="nav" id="nav">
+            <img src="./tc logo.jpeg" alt="">
+            <span class="orange heavyText">Join Extra Crunch</span>
+            <span class="login lightText"><a href="">Login</a></span>
+            <ul class="lightText">
+                <li><a href="">Search</a></li>
+                <li><a href="">Startups</a></li>
+                <li><a href="">Videos</a></li>
+                <li><a href="">Audio</a></li>
+                <li><a href="">Newsletters</a></li>
+                <li><a href="">Extra Crunch</a></li>
+                <li><a href="">The TC List</a></li>
+                <li><a href="">Advertise</a></li>
+                <li><a href="">Events</a></li>
+                <li class="bar"></li>
+                <li><a href="">More</a></li>
+            </ul>
+        </section>
+
+
+        <main>
+            <span class="orange heavyText">Extra Crunch</span>
+            <h1>What China's fintech market can teach the world</h1>
+            <p class="lightText">Finance researcher Martin Chorzempa discusses Ant Group, payments networks and more</p>
+            <p class="heavyText">Danny Crichton</p>
+            <img src="./main Img.jpeg" alt="">
+        </main>
+
+        <aside>
+            <div>
+                <h2>SellerX raises $118M to buy up and grow Amazon marketplace businesses</h2>
+                <span>Ingrid Lunden</span>
+            </div>
+            <div>
+                <h2 class="lightText">Spotify opens a marketplace for Canvas looping artwork designers</h2>
+                <span class="lightText">Brian Heater</span>
+            </div>
+            <div>
+                <h2>Instagram revamps its mobile messaging app Threads</h2>
+                <span>Sarah perez</span>
+            </div>
+            <div>
+
+                <h2>ZenBusiness snags $55M Series B for its incorporation and growth platform for micro businesses</h2>
+                <span>Sarah perez</span>
+            </div>
+        </aside>
+    </section>
+
+    <section class="bottom section">
+        <h3>The Latest</h3>
+        <div class="mainText">
+            <div class="left">
+                <h2>'Wonder Woman 1984' is coming to HBO Max (and some U.S theaters) on Dec.25</h2>
+                <span>Anthony Ha</span>
+                <span>9:15 AM PST November 19, 2020</span>
+            </div>
+            <div class="right lightText">
+                Although COVID-19 is surging in the United States and around the world, Warner Bros, still plans to
+                release "Wonder Woman 1984" om Christmas Day - but its plans are no longer limite...
+            </div>
+            <div class="img">
+                <img src="./aside img.jpeg" alt="">
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const toggle = document.getElementById('toggle');
+        const secs = document.querySelectorAll('section');
+        const nav = document.getElementById('nav')
+
+        toggle.addEventListener('click', () => {
+            secs.forEach((x) => { x.classList.toggle('open') })
+            nav.classList.toggle('openNav')
+        })
+
+        setInterval(() => {
+            if (window.innerWidth > 900) {
+                secs.forEach((x) => { console.log(x), x.classList.remove('open') })
+                nav.classList.remove('openNav')
+            }
+
+
+        }, 100)
+    </script>
+</body>
+
+</html>
