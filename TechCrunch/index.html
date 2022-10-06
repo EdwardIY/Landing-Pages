@@ -15,6 +15,12 @@
             font-family: poppins;
         }
 
+        .overFlow {
+            overflow: hidden;
+        }
+
+        body {}
+
         ul {
             list-style-type: none;
             padding: 0;
@@ -313,8 +319,13 @@
         const toggle = document.getElementById('toggle');
         const secs = document.querySelectorAll('section');
         const nav = document.getElementById('nav')
+        const elements = document.getElementsByTagName("*");
+        console.log(elements)
 
         toggle.addEventListener('click', () => {
+            [...elements].forEach((x) => {
+                x.classList.toggle('overFlow')
+            })
             secs.forEach((x) => { x.classList.toggle('open') })
             nav.classList.toggle('openNav')
         })
