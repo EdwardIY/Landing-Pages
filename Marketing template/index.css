@@ -50,9 +50,9 @@ body {}
     position: fixed;
     right: 5%;
     top: 20px;
-    color: white;
-    border: 3px solid white;
-    padding: .2em .1em;
+    color: transparent;
+    border: 3px solid black;
+    padding: .2em;
     border-radius: 50%;
     font-size: 30px;
     width: 50px;
@@ -66,9 +66,9 @@ body {}
     position: fixed;
     right: 5%;
     top: 20px;
-    color: white;
+    color: transparent;
     border: 3px solid white;
-    padding: .2em .3em;
+    padding: .2em;
     border-radius: 50%;
     font-size: 30px;
     cursor: pointer;
@@ -393,7 +393,8 @@ header nav .signUp {
 .helpContainer .left .order {
     background-color: #18182f;
     color: white;
-    width: 200px;
+    width: 220px;
+    text-align: center;
     margin-top: 50px;
 }
 
