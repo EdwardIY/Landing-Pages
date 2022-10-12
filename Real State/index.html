@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/675ee43295.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            text-decoration: none;
+            list-style-type: none;
+            box-sizing: border-box;
+            font-family: poppins, Arial, Helvetica, sans-serif;
+        }
+
+        :root {
+            --color_One: #00B9F0;
+            --btn_Color: #00BAF2;
+        }
+
+        .btn {
+            all: initial;
+            background-color: var(--btn_Color);
+            color: white;
+            font-family: poppins, Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            border-radius: 22px;
+            padding: .4em 0em;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .LPC {
+            height: 100vh;
+            width: 100vw;
+            background: url(./Landing_Img.jpg) center center;
+            background-color: rgba(0, 0, 0, 0.643);
+            background-blend-mode: overlay;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            padding: 0em 7em;
+        }
+
+        .LPC .left {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .logo {
+            color: var(--color_One);
+            font-size: 70px;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 45px;
+            display: inline-block;
+            margin: 0;
+        }
+
+        .logo span:nth-child(1) {
+            position: relative;
+        }
+
+        .logo span:nth-child(1)::before {
+            content: '';
+            background-color: var(--color_One);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            top: 11px;
+            left: 7.5px;
+        }
+
+        .logo span:nth-child(1)::after {
+            content: '';
+            background-color: var(--color_One);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            top: 11px;
+            right: 7.5px;
+        }
+
+        .logo span:nth-child(2) {
+            display: block;
+            font-size: 20px;
+            font-weight: initial;
+        }
+
+        .LPC .left p {
+            color: white;
+            font-size: calc(30px + .5vw);
+            font-weight: bold;
+        }
+
+        .LPC .left .bottom {
+            display: inline-flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .LPC .bottom span:nth-child(1) {
+            color: white;
+            font-size: 30px;
+        }
+
+        .LPC .bottom span:nth-child(2) {
+            color: var(--color_One);
+            font-size: 25px;
+        }
+
+        .LPC form {
+            align-self: flex-end;
+            background-color: rgba(255, 255, 255, 0.668);
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+            padding: 1em 1em;
+            padding-bottom: 3em;
+            width: 400px;
+        }
+
+        .LPC form h2 {
+            font-weight: initial;
+            font-size: 25px;
+        }
+
+        .LPC form label {
+            opacity: .5;
+            font-weight: bold;
+        }
+
+        .LPC form input {
+            all: initial;
+            margin-bottom: 20px;
+            background-color: white;
+            border-radius: 20px;
+            padding: .5em 0em .5em .7em;
+            width: 90%;
+            box-shadow: 0px 0px 5px -3px rgba(0, 0, 0, 0.75) inset;
+        }
+
+        .LPC form select {
+            border: none;
+            margin-bottom: 20px;
+            background-color: white;
+            padding: .5em 0em .5em .7em;
+            width: 91%;
+            cursor: pointer;
+        }
+
+        .LPC form .btn {
+            width: 90%;
+            margin-top: 15px;
+            align-self: center;
+            cursor: pointer;
+        }
+
+        @media(max-width:1100px) {
+            .LPC {
+                padding: 0em 3em;
+            }
+
+            .LPC form {
+                height: 100vh;
+                width: 330px;
+                padding-right: 1em;
+            }
+        }
+
+        @media(max-width:900px) {
+            .LPC {
+                padding: 0em 3em;
+            }
+
+            .LPC form {
+                height: 100vh;
+                width: 330px;
+            }
+
+            .LPC .bottom span:nth-child(1) {
+                font-size: 20px;
+            }
+
+            .LPC .bottom span:nth-child(2) {
+                font-size: initial;
+            }
+        }
+
+        @media(max-width:760px) {
+            .LPC {
+                height: initial;
+                padding: 0em 3em;
+                flex-direction: column;
+            }
+
+            .LPC .left {
+                margin-top: 50px;
+                width: 90%;
+            }
+
+            .LPC form {
+                align-self: initial;
+                width: 90%;
+            }
+        }
+
+        @media(max-width:430px) {
+            .LPC {
+                padding: 0em .1em;
+            }
+
+            .LPC form {
+                width: 100vw;
+            }
+        }
+
+
+        .benefitsTitle {
+            text-align: center;
+            font-size: 28px;
+            padding: 2em 0em;
+            background-color: rgba(0, 0, 0, 0.135);
+            width: 100%;
+        }
+
+        .benefitsContainer {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 3em 7em;
+        }
+
+        .benefitsContainer .card {
+            width: 250px;
+            text-align: center;
+        }
+
+        .benefitsContainer .card .img {
+            background: url(./Landing_Img.jpg) center center;
+            background-size: cover;
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            margin: auto;
+        }
+
+        @media(max-width:1100px) {
+            .benefitsContainer {
+                justify-content: space-between;
+                padding: 3em 2em;
+            }
+        }
+
+        @media(max-width:900px) {
+            .benefitsContainer {
+                flex-direction: column;
+                padding: 3em 0em;
+                gap: 50px;
+            }
+
+            .benefitsContainer .card {
+                width: 70%;
+            }
+
+            .benefitsContainer .card .img {
+                width: calc(200px + 7vw);
+                height: calc(200px + 7vw);
+            }
+        }
+
+        .locationContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-bottom: 3em;
+            background: rgb(21, 37, 53);
+            color: white;
+        }
+
+        .locationContainer .address {
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            width: 300px;
+        }
+
+        .locationContainer .address i {
+            color: var(--btn_Color);
+            font-size: 80px;
+            margin-right: 60px;
+        }
+
+        .locationContainer .des {
+            width: 500px;
+        }
+
+        .locationContainer .des h2 {
+            font-size: 50px;
+            color: var(--btn_Color);
+            text-transform: uppercase;
+        }
+
+        @media(max-width:950px) {
+            .locationContainer {
+                flex-direction: column-reverse;
+                gap: 50px;
+            }
+
+            .locationContainer .address {
+                width: 90%;
+                justify-content: center;
+            }
+
+            .locationContainer .des {
+                width: 90%;
+            }
+
+        }
+
+        main {
+            padding: 7em 0em;
+            padding-bottom: 0em;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        main section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 75px;
+            margin-bottom: 90px;
+        }
+
+        main section:nth-child(2) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+
+        main section:last-child {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            margin-bottom: 0;
+            color: white;
+            background: rgb(21, 37, 53);
+            padding: 4em 0em;
+        }
+
+        main section:last-child h2 {
+            font-size: 30px;
+            font-weight: initial;
+            text-align: center;
+        }
+
+        main section:last-child .btn {
+            width: 250px;
+        }
+
+        main section img {
+            width: 50%;
+        }
+
+        main section .text {
+            font-size: calc(20px + 2vw);
+            font-weight: bold;
+            flex: 1;
+        }
+
+        main section .list {
+            padding: 0;
+            flex: 1;
+        }
+
+        main .list h3 {
+            font-size: 25px;
+            font-weight: initial;
+        }
+
+        main .list li:last-child {
+            font-weight: bold;
+        }
+
+        @media(max-width:1000px) {
+            main {
+                width: 90%;
+            }
+
+            main section {
+                gap: 30px;
+            }
+
+            main section img {
+                width: calc(400px + 1vw);
+            }
+        }
+
+        @media(max-width:845px) {
+            main section {
+                flex-direction: column !important;
+            }
+
+            main section img {
+                width: 70vw;
+            }
+
+            main section .text {
+                text-align: center;
+            }
+
+            main section .list {
+                width: 100%;
+                text-align: center;
+            }
+
+            main section .list h3 {
+                font-size: 35px;
+                margin-top: 0;
+            }
+
+            main section .list li {
+                font-size: 25px;
+            }
+        }
+
+        @media(max-width:500px) {
+            main {
+                width: 100vw;
+            }
+
+            main section img {
+                min-width: 100vw;
+            }
+
+            main section .list {
+                text-align: start;
+                margin-left: 20px;
+            }
+
+            main section .list h3 {
+                font-size: 25px;
+            }
+
+            main section .list li {
+                font-size: 18px;
+            }
+        }
+
+        .contactContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 75px;
+            padding-top: 1em;
+        }
+
+        .contactContainer h2 {
+            text-align: center;
+            font-weight: initial;
+            font-size: 27px;
+        }
+
+        .contactsContainer {
+            padding: 0em 8em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .contactsContainer .card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contactsContainer .card .img {
+            width: calc(150px + 5vw);
+            height: calc(150px + 5vw);
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .contactsContainer .card span:nth-child(2) {
+            margin-bottom: 20px;
+            align-self: center;
+            font-style: italic;
+        }
+
+        .contactsContainer .card a {
+            text-decoration: underline;
+        }
+
+        .contactsContainer .img.p_one {
+            background: url(./96.jpg) center center;
+            background-size: cover;
+
+        }
+
+        .contactsContainer .img.p_two {
+            background: url(./68.jpg) center center;
+            background-size: cover;
+
+        }
+
+        .contactsContainer .img.p_three {
+            background: url(./81.jpg)center center;
+            background-size: cover;
+        }
+
+        @media(max-width:1150px) {
+            .contactsContainer {
+                padding: 0em 3em;
+            }
+        }
+
+        @media(max-width:750px) {
+            .contactsContainer {
+                flex-direction: column;
+                gap: 75px;
+            }
+
+            .contactsContainer .card .img {
+                width: 50vw;
+                height: 50vw;
+            }
+
+        }
+
+        .quoteC {
+            background: url(./Landing_Img.jpg) center center;
+            background-size: cover;
+            background-color: rgb(17, 30, 43);
+            background-blend-mode: overlay;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 5em;
+            padding-top: .5em;
+            padding-bottom: 3em;
+            padding-right: 5em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quoteC img {
+            position: absolute;
+            bottom: -100px;
+            width: 250px;
+            left: 20%;
+        }
+
+        .quoteC p {
+            color: white;
+            font-size: 30px;
+            width: 40%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .quoteC p::before {
+            font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            content: '\201c';
+            font-size: 200px;
+            position: absolute;
+            top: -20%;
+            left: -8%;
+            z-index: -1;
+            opacity: .2;
+        }
+
+        .quoteC span {
+            display: block;
+            color: var(--color_One);
+            width: 40%;
+        }
+
+        .quoteC span::before {
+            content: '\2014\0020';
+        }
+
+        @media(max-width:1000px) {
+            .quoteC {
+                padding-right: .5em;
+            }
+
+            .quoteC img {
+                position: absolute;
+                bottom: -100px;
+                width: 250px;
+                left: 5%;
+            }
+
+            .quoteC p {
+                width: 70%;
+            }
+
+            .quoteC span {
+                width: 70%;
+            }
+        }
+
+        @media(max-width:700px) {
+            .quoteC {
+                padding-right: 0em;
+                padding-left: 8vw;
+                padding-bottom: 1em;
+            }
+
+            .quoteC img {
+                display: none;
+            }
+
+            .quoteC p {
+                width: 100%;
+                font-size: 25px;
+            }
+
+            .quoteC span {
+                width: 100%;
+            }
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 5em;
+            padding: 2em 1em;
+            background-color: rgba(0, 0, 0, 0.884);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="LPC">
+        <div class="left left-In1">
+            <h1 class="logo">Allh<span>e</span>r <span>Real state</span></h1>
+            <p>
+                AN ATTENTION GRABBING HEADLINE WITH ONE STRONG IDEA
+            </p>
+            <div class="bottom">
+                <span>Next Open House:</span>
+                <span>Saturday, May 21 12:00 PM - 5:00PM</span>
+            </div>
+        </div>
+
+        <form class="bottom-In" action="">
+            <h2>What are you offering in exchange for someone's information?</h2>
+            <label for="">Name *</label>
+            <input type="text">
+            <label for="">Email *</label>
+            <input type="email">
+            <label for="">Phone Number *</label>
+            <input type="tel">
+            <label for="">State *</label>
+            <select>
+                <option selected value="AL">Select a State</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+            </select>
+            <button class="btn">Request showing</button>
+        </form>
+    </section>
+    <section class="benefitsTitle fade-In">Your key benefits</section>
+    <section class="benefitsContainer bottom-In">
+        <div class="card">
+            <div class="img">
+            </div>
+            <p>Use simple, accessible language for more conversions. Longer pages convert up to 33% less. Fear-inducing
+                words (like "problem" and "risk) had a slight negative impact on conversion</p>
+        </div>
+        <div class="card">
+            <div class="img">
+            </div>
+            <p>Use simple, accessible language for more conversions. Longer pages convert up to 33% less. Fear-inducing
+                words (like "problem" and "risk) had a slight negative impact on conversion</p>
+        </div>
+        <div class="card">
+            <div class="img">
+            </div>
+            <p>Use simple, accessible language for more conversions. Longer pages convert up to 33% less. Fear-inducing
+                words (like "problem" and "risk) had a slight negative impact on conversion</p>
+        </div>
+    </section>
+    <section class="locationContainer fade-In">
+        <div class="address">
+            <i class="fa-solid fa-location-dot"></i>
+            3940 Gateway Rd. Brookefield, Vancouver 53045
+        </div>
+
+        <div class="des">
+            <h2>Beautiful <br> location</h2>
+            Located right off of Gateway Rd. at Drake Street, Allhër apartments are within a short walking distance to
+            Yaletown, the West End, and English Bay. This central location situates Ahllër close to numerous
+            restaurants, café's, retail shops and city parks such as George Wainborn Park, David Lam Park and even
+            Sunset Beach Park.
+        </div>
+    </section>
+    <main>
+        <section class="first bottom-In">
+            <img src="./Livingroom_1.jpg" alt="">
+            <div class="text">
+                Now also renting a wide range of furnished and serviced apartments.
+            </div>
+        </section>
+
+        <section class="second bottom-In">
+            <img src="./Livingroom_2.jpg" alt="">
+            <ul class="list">
+                <h3>Details</h3>
+                <li>* Exotic hardwoods</li>
+                <li>* Seamless indoor–outdoor living</li>
+                <li>* Premium natural stone</li>
+                <li>* Amazing views</li>
+                <li>* Best of West Coast art and sculptures</li>
+                <li>* Expansive terraces for entertainment </li>
+                <li>* Custom Italian cabinetry</li>
+                <li>* Porcelain tile flooring</li>
+                <li>* And much more…</li>
+            </ul>
+        </section>
+        <section class="second bottom-In">
+            <img src="./Livingroom_3.jpg" alt="">
+            <ul class="list">
+                <h3>Amenities</h3>
+                <li>* Bicycle room</li>
+                <li>* Cable ready</li>
+                <li>* City and water views</li>
+                <li>* On-site staff</li>
+                <li>* Seawall nearby </li>
+                <li>* Social room</li>
+                <li>* Security cameras
+                <li>
+                <li>* Internet-ready</li>
+                <li>* Communal BBQ</li>
+                <li>* Seamless indoor–outdoor living</li>
+                <li>* Premium natural stone</li>
+            </ul>
+        </section>
+        <section class="ctaContainer fade-In">
+            <h2>So, what are you waiting for?</h2>
+            <div class="btn">Request showing</div>
+        </section>
+    </main>
+    <section class="contactContainer bottom-In">
+        <h2>Reach one of our trusted agents</h2>
+        <div class="contactsContainer">
+            <div class="card">
+                <div class="img p_one"></div>
+                <span>STEPHANIE SAKAKIBARA</span>
+                <span>P-887-767-9887</span>
+                <span>E-<a href="">name@company.com</a></span>
+            </div>
+            <div class="card">
+                <div class="img p_two"></div>
+                <span>MICHAEL DILLEY</span>
+                <span>P-887-767-9887</span>
+                <span>E-<a href="">name@company.com</a></span>
+            </div>
+            <div class="card">
+                <div class="img p_three"></div>
+                <span>ASHLEY NELSON</span>
+                <span>P-887-767-9887</span>
+                <span>E-<a href="">name@company.com</a></span>
+            </div>
+        </div>
+    </section>
+    <section class="quoteC fade-In">
+        <p>We were so fortunate to have found Sam when we moved to Van. As our Realtor, he helped us find the right
+            house in the right neighborhood for the right price.</p>
+        <span>Sylvie Aucoin</span>
+        <img src="./My project.png" alt="">
+    </section>
+    <footer>
+        <h1 class="logo"> All<span>E</span>r</h1>
+        <p>Suite 200, 578 West 8th Avenue Vancouver, B.C., Canada V0Z 1B1</p>
+        <p>Phone: (604) 683-7690Email: ahller@aptrentals.com</p>
+    </footer>
+
+
+    <script>
+        window.sr = ScrollReveal();
+        sr.reveal(".left-In1",
+            {
+                origin: "left",
+                distance: "100px",
+                duration: 1000,
+                delay: 500
+
+            });
+
+        sr.reveal(".bottom-In",
+            {
+                origin: "bottom",
+                distance: "100px",
+                duration: 2000,
+                viewFactor: .4,
+
+            });
+
+        sr.reveal(".bottom-InDelay",
+            {
+                origin: "bottom",
+                distance: "100px",
+                duration: 2000,
+                viewFactor: .4,
+                delay: 500
+
+            });
+
+        sr.reveal(".fade-In",
+            {
+                duration: 2000,
+                opacity: 0
+
+            });
+        sr.reveal(".left-In2",
+            {
+                origin: "left",
+                distance: "100px",
+                duration: 2000,
+                viewFactor: .3
+
+
+            });
+        sr.reveal(".top-In",
+            {
+                origin: "top",
+                distance: "100px",
+                duration: 2000,
+                viewFactor: .3
+
+
+            });
+        sr.reveal('.item1-up-In',
+            {
+                origin: "bottom",
+                distance: "50px",
+                viewFactor: .2
+
+            });
+
+        sr.reveal('.item2-up-In',
+            {
+                delay: 100,
+                origin: "bottom",
+                distance: "50px",
+                viewFactor: .2
+
+
+            });
+        sr.reveal('.item3-up-In',
+            {
+                delay: 200,
+                origin: "bottom",
+                distance: "50px",
+                viewFactor: .2
+
+
+            });
+        sr.reveal('.item4-up-In',
+            {
+                delay: 300,
+                origin: "bottom",
+                distance: "50px",
+                viewFactor: .2
+
+
+            });
+        sr.reveal('.item5-up-In',
+            {
+                delay: 400,
+                origin: "bottom",
+                distance: "50px",
+                viewFactor: .2
+            });
+
+
+
+        sr.reveal(".left-In3",
+            {
+                origin: "left",
+                distance: "100px",
+                duration: 2000,
+                viewFactor: .3
+
+            })
+        sr.reveal(".right-In",
+            {
+                origin: "right",
+                distance: "100px",
+                // duration:1000,
+                duration: 2000,
+                viewFactor: .3,
+                delay: 500
+            })
+    </script>
+</body>
+
+</html>
