@@ -8,269 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Document</title>
-
     <script src="https://kit.fontawesome.com/675ee43295.js" crossorigin="anonymous"></script>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: poppins;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit
-        }
-
-        p {
-            line-height: 2em;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        li {
-            display: inline-block;
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        .mainBlue {
-            color: #2f66f3
-        }
-
-        header section {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            height: 10vh;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.119);
-            font-weight: 600;
-        }
-
-        header section:nth-child(2) {
-            display: none;
-        }
-
-        header section .nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            align-items: center;
-        }
-
-
-        .nav .dropdown {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .dropdown i {
-            font-size: 12px;
-            height: 15px;
-
-        }
-
-        .nav .search,
-        .mobileNav .search {
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.06);
-            padding: .6em .4em;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-radius: 5px;
-        }
-
-        .search input {
-            all: initial
-        }
-
-        ::placeholder {
-            all: inherit;
-            color: #2f66f3;
-            font-weight: 600;
-            font-family: poppins;
-        }
-
-        .search i {
-            font-size: 20px;
-            color: rgba(0, 0, 0, 0.43)
-        }
-
-        .logo img {
-            max-width: 80%;
-        }
-
-        header .dls {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        main {
-            height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        main .mainImage {
-            width: 35%;
-        }
-
-        main .maintext {
-            width: 40%;
-        }
-
-        .maintext h1 {
-            font-size: 50px;
-            width: 90%;
-        }
-
-        .maintext p {
-            margin-bottom: 25px;
-        }
-
-        .maintext ul {
-            display: flex;
-            align-items: center;
-            justify-content: start;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .maintext ul li {
-            background-color: #2f66f3;
-            color: white;
-            padding: .6em .8em;
-            border-radius: 5px;
-        }
-
-        @media(max-width:1000px) {
-            main {
-                gap: 15%;
-            }
-
-            .maintext h1 {
-                font-size: 40px;
-            }
-
-            .mainImage img {
-                max-width: 140%;
-            }
-
-            main .maintext {
-                width: 50%;
-            }
-        }
-
-        @media(max-width:630px) {
-            main {
-                gap: 0%;
-                justify-content: flex-start;
-            }
-
-            .mainImage img {
-                min-width: 100vw;
-            }
-
-            main .maintext {
-                border-radius: 10px;
-                padding: 1em;
-                color: white;
-                background-color: rgba(0, 0, 0, 0.733);
-                width: 90%;
-                margin-left: -30%;
-            }
-        }
-
-        @media(max-width:350px) {
-            .maintext h1 {
-                font-size: 30px;
-            }
-
-        }
-
-        /* MOBILE */
-        @media(max-width:800px) {
-            header section:nth-child(1) {
-                display: none;
-            }
-
-            header section:nth-child(2) {
-                display: flex;
-                justify-content: space-between;
-                padding-right: .7em;
-            }
-
-            .mobileNav {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: 40px;
-            }
-
-            .mobileNav i {
-                color: #2f66f3;
-                font-size: 20px;
-                cursor: pointer;
-            }
-        }
-
-        @media(max-width:480px) {
-            .mobile {
-                flex-direction: column;
-                justify-content: center;
-            }
-
-            .mobileNav {
-                width: 90vw;
-            }
-
-            .mobileNav {
-                justify-content: space-between;
-                gap: 50px;
-                /* gap: 20vw; */
-            }
-
-            header section:nth-child(2) {
-                display: flex;
-                justify-content: space-evenly;
-                height: 20vh;
-            }
-
-        }
-    </style>
-
-
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
     <header>
         <section class="primNav">
             <div class="nav mainBlue">
-                <div class="dropdown">
-                    <span>Courses</span>
+                <div id="coursebtn" class="dropdown">
+                    <span >Courses</span>
                     <i class="fa-solid fa-sort-down"></i>
                 </div>
                 <div class="search">
-                    <input type="text" placeholder="Search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input class="searchInput" type="text" placeholder="Search">
+                    <i class="fa-solid fa-magnifying-glass searchBtn"></i>
                 </div>
             </div>
 
@@ -279,9 +31,9 @@
             </div>
 
             <ul class="dls mainBlue">
-                <li><a href="">Donate</a></li>
-                <li><a href="">Login</a></li>
-                <li><a href="">Sign up</a></li>
+                <li><a href="https://donate.khanacademy.org/give/419869/#!/donation/checkout?c_src2=Webapp.header">Donate</a></li>
+                <li><a href="https://www.khanacademy.org/login">Login</a></li>
+                <li><a href="https://www.khanacademy.org/signup">Sign up</a></li>
             </ul>
         </section>
 
@@ -292,8 +44,8 @@
 
             <div class="mobileNav">
                 <div class="search">
-                    <input type="text" placeholder="Search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input class="searchInput"  type="text" placeholder="Search">
+                    <i  class="fa-solid fa-magnifying-glass searchBtn"></i>
                 </div>
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -303,37 +55,304 @@
 
     </header>
 
-    <main>
-        <div class="mainImage">
+    <section id="Courses" class="Courses">
+        <ul class="CourseList">
+            <li class="CourseList-title"><a href="">Math: PRE-K-8TH GRADE:</a></li>
+            <li><a href="">Pre-K through grade 2 (Khan kids)</a></li>
+            <li><a href="">Early math review</a></li>
+            <li><a href="">2nd grade</a></li>
+            <li><a href="">3nd grade</a></li>
+            <li><a href="">4yh grade</a></li>
+            <li><a href="">5th grade</a></li>
+            <li><a href="">6th grade</a></li>
+            <li><a href="">7th grade</a></li>
+            <li><a href="">8th grade</a></li>
+            <li><a href="">See Pre-K- 8th grade Math</a></li>
+        </ul>
+        <ul class="CourseList">
+            <li class="CourseList-title"><a href="">Math: PRE-K-8TH GRADE:</a></li>
+            <li><a href="">Pre-K through grade 2 (Khan kids)</a></li>
+            <li><a href="">Early math review</a></li>
+            <li><a href="">2nd grade</a></li>
+            <li><a href="">3nd grade</a></li>
+            <li><a href="">4yh grade</a></li>
+            <li><a href="">5th grade</a></li>
+            <li><a href="">6th grade</a></li>
+            <li><a href="">7th grade</a></li>
+            <li><a href="">8th grade</a></li>
+            <li><a href="">See Pre-K- 8th grade Math</a></li>
+        </ul>
+        <ul class="CourseList">
+            <li class="CourseList-title"><a href="">Math: PRE-K-8TH GRADE:</a></li>
+            <li><a href="">Pre-K through grade 2 (Khan kids)</a></li>
+            <li><a href="">Early math review</a></li>
+            <li><a href="">2nd grade</a></li>
+            <li><a href="">3nd grade</a></li>
+            <li><a href="">4yh grade</a></li>
+            <li><a href="">5th grade</a></li>
+            <li><a href="">6th grade</a></li>
+            <li><a href="">7th grade</a></li>
+            <li><a href="">8th grade</a></li>
+            <li><a href="">See Pre-K- 8th grade Math</a></li>
+        </ul>
+        <ul class="CourseList">
+            <li class="CourseList-title"><a href="">Math: PRE-K-8TH GRADE:</a></li>
+            <li><a href="">Pre-K through grade 2 (Khan kids)</a></li>
+            <li><a href="">Early math review</a></li>
+            <li><a href="">2nd grade</a></li>
+            <li><a href="">3nd grade</a></li>
+            <li><a href="">4yh grade</a></li>
+            <li><a href="">5th grade</a></li>
+            <li><a href="">6th grade</a></li>
+            <li><a href="">7th grade</a></li>
+            <li><a href="">8th grade</a></li>
+            <li><a href="">See Pre-K- 8th grade Math</a></li>
+        </ul>
+    </section>
+
+    <section id="LD" class="LD">
+        <div class="LD_Image">
             <img src="./Khan Limage.jpeg" alt="">
         </div>
-        <div class="maintext">
-            <h1>For Every student every classroom. Real results</h1>
-            <p>We're a nonprofit with the mission to provide a free, world-class education for anyone, anywhere</p>
-            <ul>
+        <div class="LD_Text">
+            <h1 class="LD_h1">For Every student every classroom. Real results</h1>
+            <p class="LD_p">We're a nonprofit with the mission to provide a free, world-class education for anyone, anywhere</p>
+            <ul class="LD_ul">
                 <li><a href="">Learners</a></li>
                 <li><a href="">Teachers</a></li>
                 <li><a href="">Districts</a></li>
                 <li><a href="">Parents</a></li>
             </ul>
         </div>
-    </main>
+    </section>
+
+
+    <section class="Section1">
+        <h2 class="Section1_Title">Why Khan Academy works</h2>
+        <div class="Section1_CardContainer">
+            <div class="Section1_Card">
+                <img class="Section1_Card_Img" src="./Icon_One.jpeg" alt="">
+                <h3 class="Section1_Card_Title">Personalized learning</h3>
+                <p class="Section1_Card_Description">Students practice at their own pace, first filling in gaps in their understanding and then accelerating their learning.</p>
+            </div>
+            <div class="Section1_Card">
+                <img class="Section1_Card_Img" src="./Icon_Two.jpeg" alt="">
+                <h3 class="Section1_Card_Title">Trusted content</h3>
+                <p class="Section1_Card_Description">Created by experts, Khan Academy’s library of trusted, standards-aligned practice and lessons covers math K-12 through early college, grammar, science, history, AP®, SAT®, and more. It’s all free for learners and teachers.</p>
+            </div>
+            <div class="Section1_Card">
+                <img class="Section1_Card_Img" src="./Icon_Three.jpeg" alt="">
+                <h3 class="Section1_Card_Title">Tools to empower teachers</h3>
+                <p class="Section1_Card_Description">With Khan Academy, teachers can identify gaps in their students’ understanding, tailor instruction, and meet the needs of every student.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="Section2">
+        <span class="Section2_Note">Districts</span>
+        <div class="Section2_Container">
+            <div class="Section2_Container_Left">
+                <h2 class="Section2_Left_Title">Khan Academy boosts <span class="Section2_Left_Title-highlight">student learning</span></h2>
+                <p class="Section2_Left_Description">In a recent study, students were over twice as likely to meet grade-level standards with Khan Academy. Districts across the country are partnering with us to ensure all their students succeed.</p>
+                <button class="Section2_Left_btn">Districts, start here</button>
+            </div>
+            <img src="./BarGraph.png" alt="" class="Section2_Container_Right-Img">
+        </div>
+    </section>
+
+
+    <section class="Section2">
+        <span class="Section2_Note">Teachers</span>
+        <div class="Section2_Container Teachers">
+            <div class="Section2_Container_Left">
+                <h2 class="Section2_Left_Title">“I’m finally able to truly differentiate my classroom. This has been priceless for my students’ engagement.”</h2>
+                <p class="Section2_Left_Description">We empower teachers to support their entire classroom. 90% of US teachers who have used Khan Academy have found us effective.</p>
+                <button class="Section2_Left_btn">Teachers, start here</button>
+            </div>
+            <img src="./Children.png" alt="" class="Section2_Container_Right-Img">
+        </div>
+    </section>
+
+
+    <section class="Section2">
+        <span class="Section2_Note">LEARNERS AND STUDENTS</span>
+        <div class="Section2_Container">
+            <div class="Section2_Container_Left">
+                <h2 class="Section2_Left_Title"><span class="Learners_Students_Title-highlight">You</span> can learn anything.</h2>
+                <p class="Section2_Left_Description">Build a deep, rock-solid understanding in math, grammar, science, history, SAT®, AP®, and more.</p>
+                <button class="Section2_Left_btn">Learners, start here</button>
+            </div>
+            <img src="./Laptop.png" alt="" class="Section2_Container_Right-Img">
+        </div>
+    </section>
+
+
+    <section class="quote">
+        <p class="quote_Description">“I come from a poor family. At home it’s one room, just a room we live in. When I was a child, I used to fear mathematics. But now, I am in love with mathematics because of Khan Academy.”</p>
+        <span class="quote_Author"> <span class="quote_Author_name">ANJALI</span> <span class="quote_Author_location">INDIA</span></span>
+        <img class="quote_Img" src="./Person_12.jpeg" alt="">
+    </section>
+
+
+    <section class="Section2">
+        <span class="Section2_Note">TOGETHER WE CAN MAKE A DIFFERENCE</span>
+        <div class="Section2_Container Teachers">
+            <div class="Section2_Container_Left">
+                <h2 class="Section2_Left_Title">Every child deserves the chance to learn.</h2>
+                <p class="Section2_Left_Description">Across the globe, 617 million children are missing basic math and reading skills. We’re a nonprofit delivering the education they need, and we need your help. You can change the course of a child’s life.</p>
+                <button class="Section2_Left_btn">Give them the chance</button>
+            </div>
+            <img src="./Child.png" alt="" class="Section2_Container_Right-Img">
+        </div>
+    </section>
+
+
+    <section class="Join">
+        <h2 class="Join_Title">Join Khan Academy today</h2>
+        <div class="Join_BtnContainer">
+        <button class="Join_btn">Learners</button>
+        <button class="Join_btn">Teachers</button>
+        <button class="Join_btn">Districts</button>
+        <button class="Join_btn">Parents</button>
+        <button class="Join_btn">Give today</button>
+
+        <img class="Join_Img one" src="./Icon_Three.jpeg" alt="">
+        <img  class="Join_Img two" src="./Icon_Two.jpeg" alt="">
+        </div>
+    </section>
+
+    <section class="Supporters">
+            <h2 class="Suppporter_Title">Key supporters</h2>
+            <div class="Suppporter_ImgContainer">
+                <img src="https://cdn.kastatic.org/images/supporters-logos/bank-of-america-dark-gray@2x.png" alt="">
+                <img src="https://cdn.kastatic.org/images/supporters-logos/college-board-dark-gray@2x.png" alt="">
+                <img src="https://cdn.kastatic.org/images/supporters-logos/lemann-foundation-dark-gray@2x.png" alt="">
+                <img src="https://cdn.kastatic.org/images/supporters-logos/ann-and-john-doerr-dark-gray@2x.png" alt="">
+                <img src="https://cdn.kastatic.org/images/supporters-logos/gates-foundation-dark-gray@2x.png" alt="">
+                <img src="https://cdn.kastatic.org/images/supporters-logos/carlos-rodriguez-pastor-dark-gray@2x.png" alt="">
+                <img src="https://cdn.kastatic.org/images/supporters-logos/tata-trusts-dark-gray@2x.png" alt="">
+                <img src="https://cdn.kastatic.org/images/supporters-logos/valhalla-dark-gray@2x.png" alt="">
+            </div>
+
+            <h2 class="Suppporter_Title">Supporters of our COVID-19 response</h2>
+            <div class="Suppporter_ImgContainer">
+                <img src="https://cdn.kastatic.org/images/supporters-logos/bank-of-america-dark-gray@2x.png" alt="">
+                <img src="https://cdn.kastatic.org/images/supporters-logos/att-dark-gray@2x.png" alt="">
+                <img src="https://cdn.kastatic.org/images/supporters-logos/google-dark-gray@2x.png" alt="">
+                <img src="https://cdn.kastatic.org/images/supporters-logos/novartis-dark-gray@2x.png" alt="">
+                <img src="https://cdn.kastatic.org/images/supporters-logos/fastly-dark-gray@2x.png" alt="">
+                <img src="https://cdn.kastatic.org/images/supporters-logos/gm-dark-gray@2x.png" alt="">
+                <img src="https://cdn.kastatic.org/images/supporters-logos/adobe-dark-gray@2x.png" alt="">
+            </div>
+         
+    </section>
 
 
 
 
+    <footer class="Footer">
+        <div class="FooterTop">
+            <div class="Footer_TextConatiner">
+                <div class="FooterMissionTextContaier">
+                    <p class="FooterMissionTextContaier_Description" >Our mission is to provide a free, world-class education to anyone, anywhere</p>
+                    <p class="FooterMissionTextContaier_Description">Khan Academy is a 501(c)(3) nonprofit organization. <span class="Footer_Description-Highlight">Donate</span>  or <span class="Footer_Description-Highlight">volunteer</span>  today!</p>
+                </div>
+                <div class="FooterCountryContainer">
+                    <span>Sites:</span>
+                    <span><a href="https://www.khanacademy.org/">Original Site</a></span>
+                    <span> <a href="https://india.khanacademy.org/"> India</a></span>
+                    <span><a href="https://es.khanacademy.org/">Mexico</a></span>
+                    <span><a href="https://pt.khanacademy.org/">Brazil</a></span>
+                </div>
+
+            </div>
+
+            <div class="FooterListsContainer">
+                <ul class="FooterList">
+                    <li class="FooterList-Title" ><a href="">About</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Impact</a></li>
+                    <li><a href="">Our team</a></li>
+                    <li><a href="">Our interns</a></li>
+                    <li><a href="">Our content specialists</a></li>
+                    <li><a href="">Our leadership</a></li>
+                    <li><a href="">Our supporters</a></li>
+                    <li><a href="">Our contributers</a></li>
+                    <li><a href="">Our finances</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Internships</a></li>
+                </ul>
+
+                <ul class="FooterList">
+                    <li class="FooterList-Title">Contact</li>
+                    <li><a href="">help center</a></li>
+                    <li><a href="">Support community</a></li>
+                    <li><a href="">Share your story</a></li>
+                    <li><a href="">Press</a></li>
+                    <li class="FooterList-Title Break">Download our apps</li>
+                    <li><a href="">IOS app</a></li>
+                    <li><a href="">Android app</a></li>
+
+                </ul>
 
 
+                <ul class="FooterList">
+                    <li class="FooterList-Title">Courses</li>
+                    <li><a href="">Math:Pre-K-8th grade</a></li>
+                    <li><a href="">Math: get ready courses</a></li>
+                    <li><a href="">Math: high school & college</a></li>
+                    <li><a href="">Test prep</a></li>
+                    <li><a href="">Science</a></li>
+                    <li><a href="">Science</a></li>
+                    <li><a href="">Computing</a></li>
+                    <li><a href="">Art & humanities</a></li>
+                    <li><a href="">Economics</a></li>
+                    <li><a href="">Reading & language arts</a></li>
+                    <li><a href="">Life skills</a></li>
+                
+                </ul>
+            </div>
+        </div>
+        <div class="FooterBottom">
+            © Etiyx & Recreated by Edward Ibeh-Young
+        </div>
+        
+
+    </footer>
+
+    <script>
+        const coursebtn = document.getElementById('coursebtn');
+        const LD = document.getElementById('LD');
+        const Courses = document.getElementById('Courses');
+        coursebtn.addEventListener('click', toggleCourseList);
+        let openList = false;
 
 
+        function toggleCourseList(){
+            openList = !openList;
+            if(openList){
+                console.log(true)
+                coursebtn.style.borderBottom = '3px solid'
+                LD.style.display = 'none';
+                Courses.style.display = 'flex';
 
+            }
+            else {
+                coursebtn.style.borderBottom = '3px solid transparent'
+                LD.style.display = 'flex';
+                Courses.style.display = 'none'; 
+            }
+        }
 
+        const header = document.querySelector('header');
+        header.addEventListener('click',(e)=>{
+            console.log(e.target.className)
+            if(e.target.className.includes('searchBtn')) {
+                window.location.href = `https://www.khanacademy.org/search?referer=%2F&page_search_query=${e.path[1].children[0].value}`
+            }
+        })
 
-
-
-
-
-
+    </script>
 </body>
 
 </html>

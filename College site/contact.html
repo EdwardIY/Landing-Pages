@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/675ee43295.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/contact.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <i id="open" class="fa-solid fa-bars nav-toggle open"></i>
+    <i id="close" class="fa-solid fa-bars-staggered nav-toggle close"></i>
+
+    <header>
+        <div class="fade-In">Eduford</div>
+        <nav id="nav">
+            <ul class="ul">
+                <li class="item1-up-In"> <a href="./index.html">Home</a></li>
+                <li class="item2-up-In"> <a href="./programs.html">Programs</a></li>
+                <li id="openNL" class="item3-up-In openNL">NewsLetter</li>
+                <li class="item4-up-In"> <a href="./contact.html">Contact</a></li>
+                <li class="item5-up-In"> <a href="./about.html">About</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="landingImgContainer">
+        <h1 class="fade-In">Contact Us</h1>
+    </section>
+
+
+    <section class="fc-container bottom-In">
+        <div class="contactInfo">
+
+            <div class="contactMethod">
+                <i class="fa-solid fa-house"></i>
+                <div class="text">
+                    <span>XYZ Road, Abc Building</span>
+                    <span>Bangalore, Karnataa, IN</span>
+                </div>
+
+            </div>
+            <div class="contactMethod">
+                <i class="fa-solid fa-phone"></i>
+                <div class="text">
+                    <span>+1 012839475</span>
+                    <span>Monday to Saturday 10 Am to 5 Pm</span>
+                </div>
+
+            </div>
+            <div class="contactMethod">
+                <i class="fa-solid fa-envelope"></i>
+                <div class="text">
+                    <span>info@sample.com</span>
+                    <span>Email us your query</span>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <form class="contactForm" action="">
+            <input required type="text" placeholder="Enter your Name">
+            <input required type="email" placeholder="Enter email address">
+            <input required type="text" placeholder="Enter your subject">
+            <textarea required placeholder="Message"></textarea>
+            <button id="btn" class="button1">Send Message</button>
+        </form>
+    </section>
+
+
+    <section class="map">
+        <h2 class="left-In1">Our location</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19037.691212140016!2d-71.49862983101357!3d41.55197385740996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e43514620ed70f%3A0x1e4e18bce7c106e7!2sRhode%20Island!5e0!3m2!1sen!2sus!4v1654608069968!5m2!1sen!2sus"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+
+    <footer>
+        <section class="linksLogoContainer">
+            <ul class="navUl">
+                <li> <a href="./index.html">Home</a></li>
+                <li> <a href="./programs.html">Programs</a></li>
+                <li id="openNL" class="openNL">NewsLetter</li>
+                <li> <a href="./contact.html">Contact</a></li>
+                <li> <a href="./about.html">About</a></li>
+            </ul>
+            <div>
+                Eduford
+            </div>
+        </section>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur sed officiis adipisci fugit
+            suscipit
+            perferendis quod culpa laborum nisi qui! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste,
+            praesentium autem quod in doloremque amet
+            voluptatibus laudantium id. Aperiam, fuga?</p>
+        <ul>
+            <li>LinkedIN</li>
+            <li>Twitter</li>
+            <li>Facebook</li>
+
+        </ul>
+    </footer>
+
+    <main id="NL-BG" class="NL-BG"></main>
+    <form id="newsLetter" class="newsLetterContainer">
+        <div aria-label="button" role="button" id="closeNL" class="closeNL">Close</div>
+        <h2>Join Our NewsLetter</h3>
+            <p>Get updated first on all current and future campus news and events </p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid ratione nobis quia possimus, hic
+                cupiditate
+                amet sit a reiciendis illum!</p>
+            <div class="email">
+                <label for="email">Email:</label>
+                <input required type="email" id="email">
+                <button id="submitBtn">Submit</button>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, cupiditate iure debitis
+                repellat
+                tenetur esse voluptatum, maxime veniam laborum, animi quasi hic magnam ipsa in provident delectus
+                dignissimos nemo soluta!</p>
+    </form>
+
+
+
+    <script src="./JS/kit.js"></script>
+    <script>
+        const btn = document.getElementById('btn')
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            btn.textContent = 'S E N T !'
+            setTimeout(() => {
+                document.querySelector('form').style.opacity = "0";
+                document.querySelector('form').style.zIndex = "-1";
+                btn.style.display = "none"
+                // btn.textContent = "Send Message"
+            }, 2000)
+            setTimeout(() => {
+                document.querySelector('.contactInfo').style.flexDirection = "initial";
+                document.querySelector('form').style.display = "none";
+            }, 2300)
+        })
+    </script>
+</body>
+
+</html>

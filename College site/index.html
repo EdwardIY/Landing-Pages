@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/675ee43295.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="preload" type="image/jpg" as="image" href="./images/LandingImage2-Large-min.jpg">
+    <link rel="preload" type="image/jpg" as="image" href="./images/LandingImage3-Large-min.jpg">
+    <link rel="preload" type="image/jpg" as="image" href="./images/LandingImage4-Large-min.jpg">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+    <img id="imgLoader" src="" alt="">
+    <div id="NL-BG" class="NL-BG"></div>
+    <button id="open" aria-label="menu" class="open"><i class="fa-solid fa-bars"></i></button>
+    <button id="close" aria-label="menu" class="close"><i class="fa-solid fa-bars-staggered"></i></button>
+
+    <header>
+        <div class="fade-In">Eduford</div>
+        <nav id="nav">
+            <ul class="ul">
+                <li class="item1-up-In"> <a href="./index.html">Home</a></li>
+                <li class="item2-up-In"> <a href="./programs.html">Programs</a></li>
+                <li id="openNL" class="item3-up-In openNL">NewsLetter</li>
+                <li class="item4-up-In"> <a href="./contact.html">Contact</a></li>
+                <li class="item5-up-In"> <a href="./about.html">About</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section class="landingImgContainer" id="landingImgContainer">
+        <div class="landingPagetext">
+            <h1 class="fade-In">Worlds Biggest University</h1>
+            <button class="button1 fade-In">Visit Us to Learn More</button>
+        </div>
+    </section>
+
+
+    <section class="faculty" id="top">
+        <h2 class="left-In1">Faculty of the month</h2>
+        <div class="facultyContainer">
+
+            <section class="pPopUpContainer" id="pPopUpContainer">
+                <div class="popUpTopContainer">
+                    <p id="nameOccupation"></p>
+                    <p id="areaOfStudy"></p>
+                </div>
+                <div class="popUpBottomContainer">
+                    <img id="Img" src="" alt="">
+                    <div>
+                        <p id="personDes"></p>
+                        <button class="closeBtn" id="closeBtn">Close</button>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <div class="person">
+                <a href="#top">
+                    <img role="button" aria-label="button" aria-expanded="false" decoding="async" decoding="async"
+                        id="p1" class="fadeToggle" src="../images/prof1.Small-min.jpg" alt="" srcset="">
+                </a>
+                <span class="personDes fadeToggle" id="">Paul Yang, Ph.D., Assistant Professor</span>
+            </div>
+
+            <div class="person">
+                <a href="#top"><img role="button" aria-label="button" aria-expanded="false" decoding="async" id="p2"
+                        class="fadeToggle" src="../images/prof2.Small-min.jpg" alt=""></a>
+                <span class="personDes fadeToggle" id="">Jack McCartney, Ph.D., Associate Professor</span>
+            </div>
+
+            <div class="person">
+                <a href="#top"><img role="button" aria-label="button" aria-expanded="false" decoding="async" id="p3"
+                        class="fadeToggle" src="../images/prof3.Small-min.jpg" alt=""></a>
+                <span class="personDes fadeToggle" id="">Smith Hacker, Ph.D., Professor</span>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="newsEvents">
+        <h2 class="left-In1">News and Campus Events</h2>
+        <section class="newsEventsContainer">
+            <article class="newsCard top-In">
+                <img decoding="async" src="../images/NewsCard_Medium-min.jpg" srcset="../images/NewsCard_Small-min.jpg 300w,
+                        ../images/NewsCard_Medium-min.jpg 800w" alt="">
+                <p>Arctic temperatures are increasing four times faster than global warming</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus tempora harum est id, blanditiis quas
+                    quod aliquid porro quis cumque dignissimos, aspernatur ullam doloremque at, recusandae asperiores
+                    eveniet aut quidem!</p>
+                <button>
+                    <a target=" _blank" href="https://www.sciencedaily.com/releases/2022/07/220705162148.htm">Source</a>
+                </button>
+            </article>
+            <article class="newsCard bottom-In">
+                <img decoding="async" src="../images/EventCard_Medium-min.jpg" srcset="../images/EventCard_Small-min.jpg 300w,
+                ../images/EventCard_Medium-min.jpg 800w" alt="">
+                <p>Local youth attend EEU summer STEM camp at Tonto Creek</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit magnam iure optio hic earum
+                    adipisci
+                    quaerat eligendi aut veritatis dolorem?</p>
+                <!-- <article class="seeMore">See more</article> -->
+            </article>
+            <aside class="eventCal bottom-In" sty>
+                <h3>Events Calendar</h3>
+                <hr>
+                <span class="dateTime">July 7 <br>12:00PM</span> <br>
+                <span style="font-style:italic">Adult Lap Swim</span>
+                <span>Swimming Pool - POOL</span>
+                <hr>
+                <span class="dateTime">July 7 <br> 1:00PM</span> <br>
+                <span style="font-style:italic">Open Swim</span>
+                <span>Swimming Pool - POOL</span>
+                <hr>
+                <span class="dateTime">July 7 <br> 6:00PM</span> <br>
+                <span style="font-style:italic">Night Swim</span>
+                <span>Swimming Pool - POOL</span>
+            </aside>
+
+        </section>
+    </section>
+
+
+    <section class="bookRecs">
+        <h2 class="headingOfContainer left-In1">Reads of The Summer</h2>
+        <div class="bookRecsContainer">
+            <div class="book">
+                <img decoding="async" src="../images/p1-min.jpg" alt="">
+                <div class="bottom-InDelay">
+                    <p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et ducimus esse fugiat sit consectetur
+                        commodi illum placeat dolore."</p>
+                    <p>"Mans search for Meaning" by Viktor Frankl</p>
+                    <p>Recomended by Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="book">
+                <img decoding="async" class="bottom-In" src="../images/p2-min.jpg" alt="">
+                <div class="bottom-InDelay">
+                    <p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et ducimus esse fugiat sit consectetur
+                        commodi illum placeat dolore."</p>
+                    <p>"The Ancient Nine" by Ian K Smith</p>
+                    <p>Recomended by Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="book">
+                <img decoding="async" class="bottom-In" src="../images/p3-min.jpg" alt="">
+                <div class="bottom-InDelay">
+                    <p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et ducimus esse fugiat sit consectetur
+                        commodi illum placeat dolore."</p>
+                    <p>"The Periodic Table" by Primo Levi</p>
+                    <p>Recomended by Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quote">
+        <div class="quoteContainer">
+            <video class="bottom-In" src="../images/production ID_5022977.mp4" autoplay loop muted></video>
+            <div class="qText left-In1">
+                <p>“When you arise in the morning think of what a privilege it is to be alive, to think, to enjoy, to
+                    love ...” </p>
+                <p>- Marcus Aurelius (The Meditations)</p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <section class="linksLogoContainer">
+            <ul class="navUl">
+                <li> <a href="./index.html">Home</a></li>
+                <li> <a href="./programs.html">Programs</a></li>
+                <li id="openNL" class="openNL">NewsLetter</li>
+                <li> <a href="./contact.html">Contact</a></li>
+                <li> <a href="./about.html">About</a></li>
+            </ul>
+            <div>
+                Eduford
+            </div>
+        </section>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur sed officiis adipisci fugit suscipit
+            perferendis quod culpa laborum nisi qui! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste,
+            praesentium autem quod in doloremque amet
+            voluptatibus laudantium id. Aperiam, fuga?</p>
+        <ul>
+            <li>LinkedIN</li>
+            <li>Twitter</li>
+            <li>Facebook</li>
+        </ul>
+    </footer>
+
+    <!-- <div id="NL-BG" class="NL-BG"></div> -->
+    <form id="newsLetter" class="newsLetterContainer">
+        <div aria-label="button" role="button" id="closeNL" class="closeNL">Close</div>
+        <h2>Join Our NewsLetter</h3>
+            <p>Get updated first on all current and future campus news and events </p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid ratione nobis quia possimus, hic
+                cupiditate
+                amet sit a reiciendis illum!</p>
+            <div class="email">
+                <label for="email">Email:</label>
+                <input required type="email" id="email">
+                <button id="submitBtn">Submit</button>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, cupiditate iure debitis
+                repellat
+                tenetur esse voluptatum, maxime veniam laborum, animi quasi hic magnam ipsa in provident delectus
+                dignissimos nemo soluta!</p>
+    </form>
+
+
+    <script src="./JS/kit.js"></script>
+    <script type="module" src="./JS/index.js"></script>
+</body>
+
+</html>
