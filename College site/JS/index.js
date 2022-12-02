@@ -87,7 +87,7 @@ const preload = setInterval(()=>{
     loadImages.style.opacity = '0';
     loadImages.style.maxWidth = '100vw';
     loadImages.style.position = 'absolute';
-    loadImages.src = `../images/LandingImage${imgIndex}-Large-min.jpg`;
+    loadImages.src = `./images/LandingImage${imgIndex}-Large-min.jpg`;
     if(loadImages.complete) imgIndex++;
     if(imgIndex == 5){
         clearInterval(preload)
@@ -101,7 +101,7 @@ function landingPageAnimation(){
     let imgIndex = 2;
         setInterval(()=>{
             console.log(imgIndex)
-            imgContainer.style.backgroundImage = `url(../images/LandingImage${imgIndex}-Large-min.jpg)`;
+            imgContainer.style.backgroundImage = `url(./images/LandingImage${imgIndex}-Large-min.jpg)`;
             console.log(imgContainer.style.backgroundImage)
             imgIndex++
             if(imgIndex == 5) imgIndex = 1;
