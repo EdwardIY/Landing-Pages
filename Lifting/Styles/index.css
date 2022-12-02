@@ -16,7 +16,7 @@ img {
 }
 
 .lContainer {
-  background: url(/images/LP.jpg) center center;
+  background: url(../images/LP.jpg) center center;
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
