@@ -395,11 +395,11 @@ nav ul li:nth-last-child(2):hover {
     position: relative;
 }
 
-.top .catContainer span:nth-of-type(1) {
+.top .catContainer span.selected {
     color: var(--main-color-one)
 }
 
-.top .catContainer span:nth-of-type(1):after {
+.top .catContainer span.selected::after {
     content: '';
     position: absolute;
     margin-left: auto;
@@ -411,6 +411,8 @@ nav ul li:nth-last-child(2):hover {
     width: 100%;
     display: block;
     margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--main-color-one);
 }
 
@@ -425,9 +427,11 @@ nav ul li:nth-last-child(2):hover {
 
 .orderOnlineContainer .bottom .card {
     position: relative;
-    min-width: 220px;
+    min-width: 260px;
     margin: auto;
+    height: auto;
     height: 300px;
+    /* height: 300px; */
     display: flex;
     align-items: center;
     justify-content: center;

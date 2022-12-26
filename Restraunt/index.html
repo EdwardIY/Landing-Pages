@@ -87,7 +87,7 @@
         <div class="top">
             <span>Order Online Now</span>
             <h2>Our Specility Cruisine</h2>
-            <div class="catContainer">
+            <div id="catConatainer" class="catContainer">
                 <span>Breakfast</span>
                 <span>Lunch</span>
                 <span>Dinner</span>
@@ -174,6 +174,9 @@
         const openNav = document.getElementById("open")
         const closeNav = document.getElementById("close")
         const nav = document.getElementById("nav")
+        const catConatainer = document.getElementById('catConatainer');
+        let selected;
+        let cards = document.querySelectorAll('.card');
 
 
         openNav.addEventListener("click", () => {
@@ -186,6 +189,50 @@
             closeNav.style.display = 'none'
             openNav.style.display = 'block'
             nav.style.top = "-100vh"
+        })
+
+        catConatainer.addEventListener('click',(e)=>{
+            if(!!!e.target.classList.length){
+                console.log(!!!e.target.classList.length)
+            if(selected) selected.classList.remove('selected');
+            selected = e.target;
+            selected.classList.add('selected');
+
+            cards.forEach((card)=>{
+                let cat;
+                let name;
+                let price;
+                if(e.target.textContent == 'Dinner'){
+                    cat = './Dinner.jpg';
+                    name = 'Sandwiches';
+                    price = '$6.99'
+                } 
+                if(e.target.textContent == 'Breakfast'){
+                    cat = './food-03.jpg';
+                    name = 'Avocado Toast';
+                    price = '$14.99'
+                }
+                if(e.target.textContent == 'Lunch'){
+                    cat = './Lunch.jpg';
+                    name = 'Pasta';
+                    price = '$12.50'
+                }
+                if(e.target.textContent == 'Dessert'){
+                cat = './Dessert.jpg';
+                name = 'Frakla';
+                price = '$7.99'
+            }
+                if(e.target.textContent == 'Shake'){
+                cat = './Shakes.jpg';
+                name = 'Multi shake';
+                price = '$10.20'
+            }
+                card.childNodes[1].src = cat;
+                card.childNodes[3].textContent = price
+                card.childNodes[5].textContent = name
+            })
+            }
+          
         })
     </script>
 </body>
