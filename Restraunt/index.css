@@ -393,6 +393,7 @@ nav ul li:nth-last-child(2):hover {
 
 .top .catContainer span {
     position: relative;
+    cursor: pointer;
 }
 
 .top .catContainer span.selected {

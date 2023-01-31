@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/675ee43295.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./donate.css">
+</head>
+<body>
+    <header>
+        <img src="./khan logo (2).jpeg" alt="">
+        <div class="login">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            <a href="">Login</a>
+        </div>
+    </header>
+
+    <section class="container">
+        <main>
+            <h1>Help us do more</h1>
+            <p>We'll get right to the point: we're asking you to help support Khan Academy. We're a nonprofit that relies on support from people like you. If everyone reading this gives $12 monthly, Khan Academy can continue to thrive for years. Please help keep Khan Academy free, for anyone, anywhere forever.</p>
+    
+            <section>
+                <div class="optionContainer" id="paymentTypeOptions">
+                    <div>One Time</div>
+                    <div class="selected">Recurring</div>
+                </div>
+                
+                <label class="frq" for="">How often would you like to donate</label>
+                <select onchange="handlePaymentOption(this)" class="frequency frq" name="" id="">
+                    <option value="Monthly">Monthly</option>
+                    <option value="Yearly">Yearly</option>
+                </select>
+    
+                <div class="amountContainer">
+                    <div class="price">$12</div>
+                    <div class="price">$20</div>
+                    <div class="price">$30</div>
+                    <div class="price">$50</div>
+                    <div class="currency">
+                        <select onchange="handleCurrency(this)" name="" id="">
+                            <option value="SHP"> USD | Saint Helena Pound</option>
+                            <option value=""> SHP | Saint Helena Pound</option>
+                        </select>
+                        <input type="text" placeholder="$ Other">
+                    </div>
+    
+                </div>
+                <div class="checkboxContainer">
+                    <span >Dedicate my donation in honor or in memory of someone</span>
+                    <input  type="checkbox">
+                </div>
+            </section>
+    
+    
+    
+            <section class="ContactInfo_C newSection">
+                <h2>Your Information</h2>
+                <div class="inputFieldConatiner">
+                    <div>
+                        <label for="">First Name *</label>
+                        <input type="text">
+                    </div>
+    
+                    <div>
+                        <label for="">Last Name *</label>
+                        <input type="text">
+                    </div>
+                </div>
+    
+                <div class="checkboxContainer">
+                    <span>Hide my name from the public</span>
+                    <input  type="checkbox">
+                </div>
+    
+                <div class="inputFieldConatiner">
+                    <div>
+                        <label for="">Email *</label>
+                        <input type="email">
+                    </div>
+                </div>
+                <span style="font-size: 14px;opacity:.6;">Your receipt will be emailed here</span>
+                <span class="termsOfService">By donating, you agree to our terms of service and privacy policy.</span>
+                <div class="inputFieldConatiner">
+                    <div>
+                        <label for="">Phone</label>
+                        <input type="email">
+                    </div>
+                </div>
+            </section>
+    
+    
+            <section class="newSection summary">
+                <div class="left">
+                    <span id="paymentType"></span>
+                    <span class="price">$0.00</span>
+                    <div class="checkboxContainer">
+                        <span>Yes, I'll cover the transaction fees so Khan Academy can keep 100% of my donation.</span>
+                        <input  type="checkbox">
+                    </div>
+                    </div>
+    
+                    <div class="right">
+                        <span>Donate with your preferred payment method:</span>
+                        <div class="selected">Credit Card</div>
+                        <div class="selected">Bank Transfer</div>
+                    </div>
+                </div>
+    
+                <div></div>
+            </section>
+        </main>
+    
+        <aside id="questions">
+            <h2>Questions</h2>
+            <div class="question">
+                <div> <i  class="fa-solid fa-caret-down "></i>Is This dontion tax deductible</div>
+                <p class="hidden">We are a 501(c)3 tax-exempt organization and your donation is tax-deductible within the guidelines of U.S. law. To claim a donation as a deduction on your U.S. taxes, please keep your email donation receipt as your official record. We'll send it to you upon successful completion of your donation.</p>
+            </div>
+            <div class="question ">
+                <div> <i class="fa-solid fa-caret-down "></i>Is This dontion tax deductible</div>
+                <p class="hidden">We are a 501(c)3 tax-exempt organization and your donation is tax-deductible within the guidelines of U.S. law. To claim a donation as a deduction on your U.S. taxes, please keep your email donation receipt as your official record. We'll send it to you upon successful completion of your donation.</p>
+            </div>
+            <div class="question">
+                <div> <i  class="fa-solid fa-caret-down "></i>Is This dontion tax deductible</div>
+                <p class="hidden">We are a 501(c)3 tax-exempt organization and your donation is tax-deductible within the guidelines of U.S. law. To claim a donation as a deduction on your U.S. taxes, please keep your email donation receipt as your official record. We'll send it to you upon successful completion of your donation.</p>
+            </div>
+            <div class="question ">
+                <div> <i class="fa-solid fa-caret-down "></i>Is This dontion tax deductible</div>
+                <p class="hidden">We are a 501(c)3 tax-exempt organization and your donation is tax-deductible within the guidelines of U.S. law. To claim a donation as a deduction on your U.S. taxes, please keep your email donation receipt as your official record. We'll send it to you upon successful completion of your donation.</p>
+            </div>
+            <div class="question">
+                <div> <i  class="fa-solid fa-caret-down "></i>Is This dontion tax deductible</div>
+                <p class="hidden">We are a 501(c)3 tax-exempt organization and your donation is tax-deductible within the guidelines of U.S. law. To claim a donation as a deduction on your U.S. taxes, please keep your email donation receipt as your official record. We'll send it to you upon successful completion of your donation.</p>
+            </div>
+            <div class="question ">
+                <div> <i class="fa-solid fa-caret-down "></i>Is This dontion tax deductible</div>
+                <p class="hidden">We are a 501(c)3 tax-exempt organization and your donation is tax-deductible within the guidelines of U.S. law. To claim a donation as a deduction on your U.S. taxes, please keep your email donation receipt as your official record. We'll send it to you upon successful completion of your donation.</p>
+            </div>
+            
+        </aside>
+    </section>
+    
+    
+
+    <script>
+       const questions = document.getElementById('questions');
+       const paymentTypeOptions = document.getElementById('paymentTypeOptions');
+       const paymentTypeInput = document.getElementById('paymentType');
+
+
+       questions.addEventListener('click',showAnswer);
+       paymentTypeOptions.addEventListener('click',handlePaymentOption);
+       paymentTypeInput.textContent = 'Recurring donation'
+
+
+
+
+
+
+
+
+
+       function showAnswer(e){
+        console.log(e.target.parentNode.children[0])
+            if(e.target.parentNode.classList[0] == 'question'){
+                e.target.parentNode.children[1].classList.toggle('hidden')
+                e.target.children[0].classList.toggle('open')
+            }
+            else if(e.target.parentNode.parentNode.classList[0] ==  'question'){
+                e.target.parentNode.parentNode.children[1].classList.toggle('hidden');
+                e.target.classList.toggle('open')            
+            }
+       }
+
+       function handlePaymentOption(e){
+        console.log('ran')
+        console.log(e)
+        let chosen = e.target ? e.target.textContent : e.value
+        if(chosen == 'One Time'){
+            e.target.parentNode.children[0].classList.add('selected');
+            e.target.parentNode.children[1].classList.remove('selected');
+            document.querySelectorAll('.frq').forEach((x)=> x.style.display = 'none');
+            paymentTypeInput.textContent = chosen + ` donation`
+
+        }
+        else {
+            e.target.parentNode.children[1].classList.add('selected')
+            e.target.parentNode.children[0].classList.remove('selected')
+            document.querySelectorAll('.frq').forEach((x)=> x.style.display = 'flex')
+            paymentTypeInput.textContent = chosen + ` donation(${document.querySelector('.frequency').value})`
+        }
+
+       }
+
+    </script>
+</body>
+</html>
