@@ -5,10 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./animations.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script defer src="./index.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <nav class="relative container mx-auto p-6">
+    <nav class="relative container mx-auto p-6 fadeIn">
         <div class="flex items-center justify-between">
             <div class="pt-2">
                 <img src="img/logo.svg" alt="">
@@ -40,7 +44,7 @@
     </nav>
     <section id="hero">
         <div class="container flex flex-col-reverse md:flex-row items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0">
-                <div class="flex flex-col mb-32 space-y-12 md:w-1/2">
+                <div class="flex flex-col mb-32 space-y-12 md:w-1/2 fadeUp">
                     <h1 class="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left">
                         Bring Everyone together to build better products
                     </h1>
@@ -53,13 +57,13 @@
                     </div>
             </div>
             <div class="md:w-1/2">
-                <img src="./img/illustration-intro.svg" alt="">
+                <img src="./img/illustration-intro.svg" class="fadeDown" alt="">
             </div>
         </div>
     </section>
     <section id="features">
         <div class="container flex flex-col px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row">
-            <div class="flex flex-col space-y-12 md:w-1/2">
+            <div class="flex flex-col space-y-12 md:w-1/2 fadeRight">
                 <h2 class="max-w-md text-4xl font-bold text-center md:text-left">
                     Whats different about Manage?
                 </h2>
@@ -69,7 +73,7 @@
                     teams.
                 </p>
             </div>  
-            <div class="div flex flex-col space-y-8 md:w-1/2">
+            <div class="div flex flex-col space-y-8 md:w-1/2 fadeLeft">
                 <div class="flex flex-col space-y-3 md:space-y-0 md: space-x-6 md:flex-row">
                     <div class="rounded-l-full bg-brightRedSupLight md:bg-transparent ">
                         <div class="flex items-center space-x-2 ">
@@ -143,11 +147,11 @@
 
     <section id="testimonials">
         <div class="max-w-6xl px-5 mx-auto mt-32 text-center">
-            <h2 class="text-4xl font-bold text-center">
+            <h2 class="text-4xl font-bold text-center fadeIn">
                 What's Different About Manage?
             </h2>
-            <div class="flex flex-col mt-24 md:flex-row md:space-x-6 ">
-                <div class=" mt-10 flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3">
+            <div class="flex flex-col mt-24 md:flex-row md:space-x-6 fadeUp">
+                <div class=" mt-10 flex flex-col items-center p-6 space-y-6 rounded-lg bg-veryLightGray md:w-1/3 ">
                     <img class="w-16 -mt-14" src="./img/avatar-anisha.png" alt="anisha">
                     <h5 class="text-lg font-bold">Anisha Li</h5>
                     <p class="text-sm text-darkGrayishBlue">
@@ -181,7 +185,7 @@
         </div>
     </section>
 
-    <section class="bg-brightRed" id="cta">
+    <section class="bg-brightRed fadeIn" id="cta">
         <div class="container flex flex-col items-center justify-between px-6 py-24 mx-auto space-y-12 md:py-12 md:flex-row md:space-y-0">
             <h2 class="text5xl font-bold leading-tight text-center text-white md:text-4xl md:max-w-xl md:text-left">
                 Simplify how your team works today?
@@ -197,7 +201,7 @@
                 <div>
                     <img src="./img/logo-white.svg" class="h-8" alt="">
                 </div>
-                <div class="flex justify-cebter space-x-4">
+                <div class="flex justify-cebter space-x-4 py-3">
                     <a href="">
                         <img src="./img/icon-facebook.svg" alt="" class="h-8">
                     </a>
@@ -230,8 +234,8 @@
             </div>
             <div class="flex flex-col justify-between">
                 <form action="">
-                    <div class="flex space-x-3">
-                        <input type="text" class="flex-1 px-4 py-1 rounded-full focus:outline-none" placeholder="Updatein yur inbox">
+                    <div class="flex space-x-3 my-5">
+                        <input type="text" class="lg:w-1/4 sm:w-1/2 px-4 py-1 rounded-full focus:outline-none" placeholder="Updatein yur inbox">
                         <button class="px-6 py-2 text-white rounded-full bg-brightRed hover:bg-brightRedLight focus:outline-none">go</button>
                     </div>
                 </form>

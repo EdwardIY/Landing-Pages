@@ -1,0 +1,23 @@
+.fadeIn {
+    opacity: 0;
+}
+
+.fadeUp {
+    opacity: 0;
+    transform:translateY(10vw)
+}
+
+.fadeDown {
+    opacity: 0;
+    transform:translateY(-10vw)
+}
+
+.fadeRight {
+    opacity: 0;
+    transform:translateX(-10vw)
+}
+
+.fadeLeft {
+    opacity: 0;
+    transform:translateX(10vw)
+}

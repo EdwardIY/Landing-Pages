@@ -3,3 +3,29 @@
         width: 50%;
     }
 }
+
+/* Scroll Animations */
+.card {
+    opacity: 0;
+    transform: translateY(20vh);
+}
+
+.left {
+    opacity: 0;
+    transform: translateX(-20vh);
+}
+
+.right {
+    opacity: 0;
+    transform: translateX(20vh);
+}
+
+.up {
+    opacity: 0;
+    transform: translateY(-20vh);
+}
+
+.down {
+    opacity: 0;
+    transform: translateY(20vh);
+}

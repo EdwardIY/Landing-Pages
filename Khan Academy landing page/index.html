@@ -7,9 +7,13 @@
     <meta name="keywords" content="one, two, three">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script defer src="./index.js"></script>
     <title>Document</title>
     <script src="https://kit.fontawesome.com/675ee43295.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./animations.css">
 </head>
 
 <body>
@@ -111,10 +115,10 @@
     </section>
 
     <section id="LD" class="LD">
-        <div class="LD_Image">
+        <div class="LD_Image fadeIn">
             <img src="./Khan Limage.jpeg" alt="">
         </div>
-        <div class="LD_Text">
+        <div class="LD_Text fadeIn">
             <h1 class="LD_h1">For Every student every classroom. Real results</h1>
             <p class="LD_p">We're a nonprofit with the mission to provide a free, world-class education for anyone, anywhere</p>
             <ul class="LD_ul">
@@ -128,8 +132,8 @@
 
 
     <section class="Section1">
-        <h2 class="Section1_Title">Why Khan Academy works</h2>
-        <div class="Section1_CardContainer">
+        <h2 class="Section1_Title fadeRight">Why Khan Academy works</h2>
+        <div class="Section1_CardContainer fadeUp">
             <div class="Section1_Card">
                 <img class="Section1_Card_Img" src="./Icon_One.jpeg" alt="">
                 <h3 class="Section1_Card_Title">Personalized learning</h3>
@@ -151,12 +155,12 @@
     <section class="Section2">
         <span class="Section2_Note">Districts</span>
         <div class="Section2_Container">
-            <div class="Section2_Container_Left">
+            <div class="Section2_Container_Left fadeUp">
                 <h2 class="Section2_Left_Title">Khan Academy boosts <span class="Section2_Left_Title-highlight">student learning</span></h2>
                 <p class="Section2_Left_Description">In a recent study, students were over twice as likely to meet grade-level standards with Khan Academy. Districts across the country are partnering with us to ensure all their students succeed.</p>
                 <button class="Section2_Left_btn">Districts, start here</button>
             </div>
-            <img src="./BarGraph.png" alt="" class="Section2_Container_Right-Img">
+            <img src="./BarGraph.png" alt="" class="Section2_Container_Right-Img fadeDown">
         </div>
     </section>
 
@@ -164,12 +168,12 @@
     <section class="Section2">
         <span class="Section2_Note">Teachers</span>
         <div class="Section2_Container Teachers">
-            <div class="Section2_Container_Left">
+            <div class="Section2_Container_Left fadeUp">
                 <h2 class="Section2_Left_Title">“I’m finally able to truly differentiate my classroom. This has been priceless for my students’ engagement.”</h2>
                 <p class="Section2_Left_Description">We empower teachers to support their entire classroom. 90% of US teachers who have used Khan Academy have found us effective.</p>
                 <button class="Section2_Left_btn">Teachers, start here</button>
             </div>
-            <img src="./Children.png" alt="" class="Section2_Container_Right-Img">
+            <img src="./Children.png" alt="" class="Section2_Container_Right-Img fadeDown">
         </div>
     </section>
 
@@ -177,17 +181,17 @@
     <section class="Section2">
         <span class="Section2_Note">LEARNERS AND STUDENTS</span>
         <div class="Section2_Container">
-            <div class="Section2_Container_Left">
+            <div class="Section2_Container_Left fadeUp">
                 <h2 class="Section2_Left_Title"><span class="Learners_Students_Title-highlight">You</span> can learn anything.</h2>
                 <p class="Section2_Left_Description">Build a deep, rock-solid understanding in math, grammar, science, history, SAT®, AP®, and more.</p>
                 <button class="Section2_Left_btn">Learners, start here</button>
             </div>
-            <img src="./Laptop.png" alt="" class="Section2_Container_Right-Img">
+            <img src="./Laptop.png" alt="" class="Section2_Container_Right-Img fadeDown">
         </div>
     </section>
 
 
-    <section class="quote">
+    <section class="quote fadeIn">
         <p class="quote_Description">“I come from a poor family. At home it’s one room, just a room we live in. When I was a child, I used to fear mathematics. But now, I am in love with mathematics because of Khan Academy.”</p>
         <span class="quote_Author"> <span class="quote_Author_name">ANJALI</span> <span class="quote_Author_location">INDIA</span></span>
         <img class="quote_Img" src="./Person_12.jpeg" alt="">
@@ -197,17 +201,17 @@
     <section class="Section2">
         <span class="Section2_Note">TOGETHER WE CAN MAKE A DIFFERENCE</span>
         <div class="Section2_Container Teachers">
-            <div class="Section2_Container_Left">
+            <div class="Section2_Container_Left fadeUp">
                 <h2 class="Section2_Left_Title">Every child deserves the chance to learn.</h2>
                 <p class="Section2_Left_Description">Across the globe, 617 million children are missing basic math and reading skills. We’re a nonprofit delivering the education they need, and we need your help. You can change the course of a child’s life.</p>
                 <button class="Section2_Left_btn">Give them the chance</button>
             </div>
-            <img src="./Child.png" alt="" class="Section2_Container_Right-Img">
+            <img src="./Child.png" alt="" class="Section2_Container_Right-Img fadeDown">
         </div>
     </section>
 
 
-    <section class="Join">
+    <section class="Join fadeUp">
         <h2 class="Join_Title">Join Khan Academy today</h2>
         <div class="Join_BtnContainer">
         <button class="Join_btn">Learners</button>
@@ -223,7 +227,7 @@
 
     <section class="Supporters">
             <h2 class="Suppporter_Title">Key supporters</h2>
-            <div class="Suppporter_ImgContainer">
+            <div class="Suppporter_ImgContainer fadeIn">
                 <img src="https://cdn.kastatic.org/images/supporters-logos/bank-of-america-dark-gray@2x.png" alt="">
                 <img src="https://cdn.kastatic.org/images/supporters-logos/college-board-dark-gray@2x.png" alt="">
                 <img src="https://cdn.kastatic.org/images/supporters-logos/lemann-foundation-dark-gray@2x.png" alt="">
@@ -235,7 +239,7 @@
             </div>
 
             <h2 class="Suppporter_Title">Supporters of our COVID-19 response</h2>
-            <div class="Suppporter_ImgContainer">
+            <div class="Suppporter_ImgContainer fadeIn">
                 <img src="https://cdn.kastatic.org/images/supporters-logos/bank-of-america-dark-gray@2x.png" alt="">
                 <img src="https://cdn.kastatic.org/images/supporters-logos/att-dark-gray@2x.png" alt="">
                 <img src="https://cdn.kastatic.org/images/supporters-logos/google-dark-gray@2x.png" alt="">
