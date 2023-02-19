@@ -11,6 +11,10 @@ html {
     overflow: hidden;
 }
 
+a {
+    color:inherit
+}
+
 img {
     max-width: 100%;
 }
@@ -175,81 +179,10 @@ header div ul + ul + ul li:last-child::after {
     right: 0%;
 }
 
-
-
-section{
-    height: 100vh;
-    width: 100vw;
-    scroll-snap-align:start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 5em;
-    padding-top: 7em;
-    position: relative;
-}
-
-.sec_1 {
-    background: url(./img/section-d.webp) center center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.sec_2 {
-    background: url(./img/section-b.webp) center center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.sec_3 {
-    background: url(./img/section-c.webp) center center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.sec_5 {
-    background: url(./img/section-a.webp) center center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.sec_6 {
-    background: url(./img/section-e.webp) center center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.sec_6 div {
-    position: absolute;
-    bottom:0;
-    left:0;
-    background-color: black;
-    width: 100vw;
-    border: 1px solid red;
-}
-
-.sec_6 div ul {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 3em 0em 2em 0em;
-    gap:10px 30px;
-    font-size: 12px;
-    font-weight: 500;
-    border: 1px solid red;
-}
-
-
 h2 {
     font-weight: 300;
     font-size: 20px;
 
-}
-
-h1 {
-    font-size: 45px;
-    width: 500px;
 }
 
 button {
@@ -319,7 +252,8 @@ button:hover::after {
     }
 }
 
-@media(max-width:630px){
+
+/* @media(max-width:630px){
     section {
         padding-left: 1em;
         padding-top:5em;
@@ -334,5 +268,27 @@ button:hover::after {
     h1 {
         font-size: 25px;
     }
-}
+} */
 
+.fadeBG {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 2;
+    animation: fade 1s;
+    animation-fill-mode: forwards;
+    /* animation-timing-function:ease; */
+}
+@keyframes fade {
+    from{
+        opacity: 1;
+        z-index: 2;
+    }
+    to{
+        opacity: 0;
+        z-index: 0;
+    }
+}

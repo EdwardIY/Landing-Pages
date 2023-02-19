@@ -1,0 +1,44 @@
+@import url(../global.css);
+
+h1 {
+    font-size: 100px;
+    font-weight:500;
+}
+
+.imgBG {
+    height: 100vh;
+    width: 100vw;
+}
+
+.sec-a {
+    background:url(../img/falcon-9.webp) center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    position: relative;
+}
+
+.sec-b {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:100px;
+    padding: 2.5em 0em;
+}
+
+.sec-b span {
+    display: block;
+    text-align: center;
+}
+
+.sec-b span:nth-of-type(1){
+    font-size: 110px;
+}
+.sec-b span:nth-of-type(2){
+    font-size: 23px;
+}
+
+
