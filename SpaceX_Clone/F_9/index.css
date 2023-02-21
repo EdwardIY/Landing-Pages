@@ -1,9 +1,24 @@
 @import url(../global.css);
 
+* {
+    line-height: 1.6em;
+}
+
+
+body {
+    all:initial;
+    font-family: poppins;
+    color:white;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
 h1 {
     font-size: 100px;
     font-weight:500;
 }
+
 
 .imgBG {
     height: 100vh;
@@ -19,15 +34,22 @@ h1 {
     text-align:center;
     position: relative;
 }
+@media(max-width:645px){
+    h1 {
+        font-size: 50px;
+    }
+}
 
 .sec-b {
     background-color: black;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     gap:100px;
-    padding: 2.5em 0em;
+    padding: 2.5em 0em 3.5em 0em;
 }
+
 
 .sec-b span {
     display: block;
@@ -39,6 +61,75 @@ h1 {
 }
 .sec-b span:nth-of-type(2){
     font-size: 23px;
+}
+@media(max-width:850px){
+    .sec-b {
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+    .sec-b span:nth-of-type(1){
+        font-size: 60px;
+    }
+    .sec-b span:nth-of-type(2){
+        font-size: 18px;
+    }
+}
+
+.sec-c {
+    position:sticky;
+    top:0;
+    left:0;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: self-start;
+    flex-direction: column;
+    padding-left: 5em;
+    height: 100vh;
+    z-index: -1;
+    transition: 1s;
+}
+
+.sec-c_des {
+    height: 140vh;
+    width: 500px;
+    font-size: 18px;
+    margin-top: -55vh;
+    margin-left: 10vw;;
+
+}
+
+.sec-c h3 {
+    font-size: 40px;
+}
+
+.sec-c_OV {
+    width: 500px;
+    opacity: 0;
+    transition: .2s;
+}
+
+.sec-c_OV div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: .7em;
+    margin:1em 0em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.37);
+}
+
+.sec-c_OV div span span {
+    color: rgba(255, 255, 255, 0.37);
+}
+
+.sec-c.Proto {
+    background:url(../img/falcon-9_lines.jpg) center center;
+    background-size: cover;
+}
+
+.sec-c.Model {
+    background:url(../img/falcon-9_model.jpg) center center;
+    background-size: cover;
 }
 
 

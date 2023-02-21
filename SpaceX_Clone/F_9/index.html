@@ -55,18 +55,113 @@
 
     <section class="sec-b">
         <div>
-            <span>204</span>
+            <span id="N1">0</span>
             <span>TOTAL LAUNCHES</span>
         </div>
         <div>
-            <span>162</span>
+            <span id="N2">0</span>
             <span>TOTAL LANDINGS</span>
         </div>
         <div>
-            <span>140</span>
+            <span id="N3">0</span>
             <span>TOTAL REFLIGHTS</span>
         </div>
     </section>
+
+    <section class="sec-c imgBG Proto">
+        <div class="sec-c_OV">
+            <h2>FALCON 9</h2>
+            <h3>OVERVIEW</h3>
+            <div>
+                <span>HEIGHT</span>
+                <span>70m<span>/229.6ft</span></span>
+            </div>
+            <div>
+                <span>DIAMETER</span>
+                <span>3.7m<span>/229.6ft</span></span>
+            </div>
+            <div>
+                <span>MASS</span>
+                <span>7m<span>/229.6ft</span></span>
+            </div>
+            <div>
+                <span>PAYLOAD TO LEO</span>
+                <span>22,800 kg<span>/50,265 lb</span></span>
+            </div>
+            <div>
+                <span>PAYLOAD TO GTO</span>
+                <span>549,054 kg <span>/ 1,207,920 lb</span></span>
+            </div>
+            <div>
+                <span>PAYLOAD TO MARS</span>
+                <span>70m<span>/229.6ft</span></span>
+            </div>
+        </div>
+       
+    </section>
+
+    <div class="sec-c_des">
+        <span id="sec-c_des">Falcon</span> 9 is a reusable, two-stage rocket designed and manufactured by SpaceX for the reliable and safe transport of people and payloads into Earth orbit and beyond. Falcon 9 is the world’s first orbital class reusable rocket. Reusability allows SpaceX to refly the most expensive parts of the rocket, which in turn drives down the cost of space access.
+    </div>
+
+  
+
+
     <script type="module" src="./index.js"></script>
+    <script>
+        let sec_C = document.querySelector('.sec-c')
+        let sec_C_Info = document.getElementById('sec-c_des');
+        let sec_C_OV = document.querySelector('.sec-c_OV');
+        let sec_B = document.querySelector('.sec-b');
+        let header = document.querySelector('header')
+        let waiting = false;
+        let isIncrementing = false;
+        let N1 = document.getElementById('N1')
+        let N2 = document.getElementById('N2')
+        let N3 = document.getElementById('N3')
+
+        function ScrollEvents () {
+            if(sec_C_Info.getBoundingClientRect().top < 0){
+                sec_C.classList.remove('Proto');
+                sec_C.classList.add('Model');
+                sec_C_OV.style.opacity = '1'
+                header.style.opacity = '0'
+            } else {
+                sec_C.classList.add('Proto');
+                sec_C.classList.remove('Model');
+                sec_C_OV.style.opacity = '0';
+                header.style.opacity = '1';
+            }
+            if(sec_B.getBoundingClientRect().top < 600 && sec_B.getBoundingClientRect().top  > -900  ){ // -600?
+                header.style.opacity = '0'
+            }
+            else header.style.opacity = '1';
+
+          if(!isIncrementing && N1.getBoundingClientRect().top < 600){
+            isIncrementing = true;
+            console.log('ran')
+            for(let i = 0; i <=204; i++){
+                setTimeout(()=>{
+                    if(+N1.textContent < 204) N1.textContent = i;
+                    if(+N2.textContent < 164) N2.textContent = i;
+                    if(+N3.textContent < 120) N3.textContent = i;
+                },i * 15)
+            }
+          }
+        };
+
+        window.addEventListener('scroll',()=>{
+            if (waiting) {
+                return;
+            }
+            waiting = true;
+
+            ScrollEvents();
+
+            setTimeout(function () {
+                waiting = false;
+            }, 100);
+        })
+    </script>
 </body>
 </html>
