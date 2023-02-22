@@ -5,6 +5,10 @@
 }
 
 
+header {
+    position: absolute;
+}
+
 body {
     all:initial;
     font-family: poppins;
@@ -13,12 +17,14 @@ body {
     overflow-x: hidden;
 }
 
-
 h1 {
     font-size: 100px;
     font-weight:500;
 }
 
+h3 {
+    font-size: 40px;
+}
 
 .imgBG {
     height: 100vh;
@@ -49,7 +55,6 @@ h1 {
     gap:100px;
     padding: 2.5em 0em 3.5em 0em;
 }
-
 
 .sec-b span {
     display: block;
@@ -82,7 +87,7 @@ h1 {
     width: auto;
     display: flex;
     justify-content: center;
-    align-items: self-start;
+    align-items: start;
     flex-direction: column;
     padding-left: 5em;
     height: 100vh;
@@ -97,10 +102,6 @@ h1 {
     margin-top: -55vh;
     margin-left: 10vw;;
 
-}
-
-.sec-c h3 {
-    font-size: 40px;
 }
 
 .sec-c_OV {
@@ -130,6 +131,63 @@ h1 {
 .sec-c.Model {
     background:url(../img/falcon-9_model.jpg) center center;
     background-size: cover;
+}
+@media(max-width:630px){
+    .sec-c {
+        padding:0em;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .sec-c_des {
+        margin-left:0;
+        width: initial;
+        padding: 0em 1em;
+        height: 170vh;
+    }
+    .sec-c_OV {
+        width: 90vw;
+        background-color:rgba(0, 0, 0, 0.68);
+        border-radius: 5px;
+        padding: 0em 1em;
+    }
+    .sec-c_OV div span {
+        font-size: 13px;
+    }
+}
+
+
+.sec-d {
+    background: url(../img/f9_video_Bg.jpg) center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.sec-d:hover i {
+    transform: scale(.8);
+}
+
+.sec-d_text {
+    position: absolute;
+    bottom: 5em;
+    left:3em;
+}
+
+.sec-d_text h3 {
+    font-size: 45px;
+}
+
+.sec-d i {
+    font-size: 70px;
+    transition: .2s;
+}
+
+.player {
+    background-color: black;
 }
 
 
