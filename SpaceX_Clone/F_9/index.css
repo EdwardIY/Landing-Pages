@@ -31,6 +31,19 @@ h3 {
     width: 100vw;
 }
 
+.detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: .7em;
+    margin:1em 0em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.37);
+}
+
+.detail span span {
+    color: rgba(255, 255, 255, 0.37);
+}
+
 .sec-a {
     background:url(../img/falcon-9.webp) center center;
     background-size: cover;
@@ -110,19 +123,6 @@ h3 {
     transition: .2s;
 }
 
-.sec-c_OV div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: .7em;
-    margin:1em 0em;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.37);
-}
-
-.sec-c_OV div span span {
-    color: rgba(255, 255, 255, 0.37);
-}
-
 .sec-c.Proto {
     background:url(../img/falcon-9_lines.jpg) center center;
     background-size: cover;
@@ -165,6 +165,7 @@ h3 {
     align-items: center;
     position: relative;
     cursor: pointer;
+    transition: .5s;
 }
 
 .sec-d:hover i {
@@ -188,6 +189,43 @@ h3 {
 
 .player {
     background-color: black;
+    position: fixed;
+    top:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 1s;
+}
+
+.player iframe {
+   width: 70vw;
+   height: 85vh;
+}
+
+.player i {
+    position: absolute;
+    top:40px; 
+    right:60px;
+    font-size: 30px;
+    cursor:pointer
+}
+
+.player span {
+    position: absolute;
+    bottom:20px;
+    font-weight: 600;
+}
+
+
+.sec-e {
+    background: url(../img/merlin.jpg) center center;
+    background-size: cover;
+}
+
+.sec-e_Text {
+    width: 400px;
 }
 
 

@@ -10,11 +10,7 @@
 </head>
 <body>
     <div class="fadeBG"></div>
-    <div class="player imgBG">
-        <i class="bi bi-x-lg"></i>
-        <iframe class = 'x' width="560" height="315" src="https://www.youtube.com/embed/Z4TXCZG_NEY?autoplay=" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <span>FALCON 9 VIDEO</span>
-    </div>
+
     <header>
         <a href="../Home/index.html">
             <img src="../img/logo.png" alt="">
@@ -77,27 +73,27 @@
         <div class="sec-c_OV">
             <h2>FALCON 9</h2>
             <h3>OVERVIEW</h3>
-            <div>
+            <div class="detail">
                 <span>HEIGHT</span>
                 <span>70m<span>/229.6ft</span></span>
             </div>
-            <div>
+            <div class="detail">
                 <span>DIAMETER</span>
                 <span>3.7m<span>/229.6ft</span></span>
             </div>
-            <div>
+            <div class="detail">
                 <span>MASS</span>
                 <span>7m<span>/229.6ft</span></span>
             </div>
-            <div>
+            <div class="detail">
                 <span>PAYLOAD TO LEO</span>
                 <span>22,800 kg<span>/50,265 lb</span></span>
             </div>
-            <div>
+            <div class="detail">
                 <span>PAYLOAD TO GTO</span>
                 <span>549,054 kg <span>/ 1,207,920 lb</span></span>
             </div>
-            <div>
+            <div class="detail">
                 <span>PAYLOAD TO MARS</span>
                 <span>70m<span>/229.6ft</span></span>
             </div>
@@ -116,12 +112,41 @@
             <h3>FALCON 9 IN FLIGHT</h3>
         </div>
     </section>
+    <div class="player imgBG">
+        <iframe class='video' src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <i class="bi bi-x-lg closePlayer"></i>
+        <span>FALCON 9 VIDEO</span>
+    </div>
+
+    <section class="sec-e imgBG">
+        <div class="sec-e_Text">
+            <h2>ENGINES</h2>
+            <h3>MERLIN</h3>
+            <span>SEA LEVEL <span>|  VACUUM</span></span>
+            <p>
+                Merlin is a family of rocket engines developed by SpaceX for use on its Falcon 1, Falcon 9 and Falcon Heavy launch vehicles. Merlin engines use a rocket grade kerosene (RP-1) and liquid oxygen as rocket propellants in a gas-generator power cycle. The Merlin engine was originally designed for recovery and reuse.
+            </p>
+            <div class="detail">
+                <span>PROPELLANT</span>
+                <span>LOX<span>/RP-1</span></span>
+            </div>
+            <div class="detail">
+                <span>THRUST</span>
+                <span>845kN<span>/190,000lbf</span></span>
+            </div>
+        </div>
+    </section>
+
 
   
 
 
     <script type="module" src="./index.js"></script>
     <script>
+        let closePlayer = document.querySelector('.closePlayer')
+        let player = document.querySelector('.player')
+        let video = document.querySelector('.video')
+        let sec_D = document.querySelector('.sec-d')
         let sec_C = document.querySelector('.sec-c')
         let sec_C_Info = document.getElementById('sec-c_des');
         let sec_C_OV = document.querySelector('.sec-c_OV');
@@ -176,7 +201,22 @@
             }, 100);
         })
 
-        setTimeout(()=> document.querySelector('.x').play(),3000 )
+        sec_D.addEventListener('click',()=>{
+            document.querySelector('body').style.overflowY = 'hidden'
+            player.style.top = '0vh'
+            player.style.opacity = '1'
+            video.src = 'https://www.youtube.com/embed/Z4TXCZG_NEY?&autoplay=1';
+
+
+        })
+        closePlayer.addEventListener('click',()=>{
+            document.querySelector('body').style.overflowY = 'initial'
+            player.style.top = '100vh'
+            player.style.opacity = '0'
+            video.src = ''
+
+        })
+
 
         
     </script>
