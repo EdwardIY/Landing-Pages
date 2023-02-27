@@ -55,25 +55,10 @@ section{
     background-attachment: fixed;
 }
 
-.sec_6 div {
-    position: absolute;
-    bottom:0;
-    left:0;
-    background-color: black;
-    width: 100vw;
-}
+footer {
+    scroll-snap-align:start;
 
-.sec_6 div ul {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 3em 0em 2em 0em;
-    gap:10px 30px;
-    font-size: 12px;
-    font-weight: 500;
 }
-
 h1 {
     font-size: 45px;
     width: 500px;

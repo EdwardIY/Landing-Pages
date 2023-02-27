@@ -68,12 +68,10 @@ h3 {
     gap:100px;
     padding: 2.5em 0em 3.5em 0em;
 }
-
 .sec-b span {
     display: block;
     text-align: center;
 }
-
 .sec-b span:nth-of-type(1){
     font-size: 110px;
 }
@@ -93,6 +91,8 @@ h3 {
     }
 }
 
+
+
 .sec-c {
     position:sticky;
     top:0;
@@ -107,7 +107,6 @@ h3 {
     z-index: -1;
     transition: 1s;
 }
-
 .sec-c_des {
     height: 140vh;
     width: 500px;
@@ -116,18 +115,15 @@ h3 {
     margin-left: 10vw;;
 
 }
-
 .sec-c_OV {
     width: 500px;
     opacity: 0;
     transition: .2s;
 }
-
 .sec-c.Proto {
     background:url(../img/falcon-9_lines.jpg) center center;
     background-size: cover;
 }
-
 .sec-c.Model {
     background:url(../img/falcon-9_model.jpg) center center;
     background-size: cover;
@@ -167,26 +163,21 @@ h3 {
     cursor: pointer;
     transition: .5s;
 }
-
 .sec-d:hover i {
     transform: scale(.8);
 }
-
 .sec-d_text {
     position: absolute;
     bottom: 5em;
     left:3em;
 }
-
 .sec-d_text h3 {
     font-size: 45px;
 }
-
 .sec-d i {
     font-size: 70px;
     transition: .2s;
 }
-
 .player {
     background-color: black;
     position: fixed;
@@ -198,12 +189,10 @@ h3 {
     opacity: 0;
     transition: 1s;
 }
-
 .player iframe {
    width: 70vw;
    height: 85vh;
 }
-
 .player i {
     position: absolute;
     top:40px; 
@@ -211,7 +200,6 @@ h3 {
     font-size: 30px;
     cursor:pointer
 }
-
 .player span {
     position: absolute;
     bottom:20px;
@@ -222,10 +210,88 @@ h3 {
 .sec-e {
     background: url(../img/merlin.jpg) center center;
     background-size: cover;
+    padding-top: 7em;
+    padding-left: 5em;
+}
+.sec-e_Text {
+    width: 450px;
+}
+.sec-e_Text .note {
+    display: block;
+    margin: 2em 0em;
+    font-weight: 500;
+}
+.sec-e_Text .note span {
+    color:rgba(255, 255, 255, 0.37);
+}
+.sec-e_Text p  {
+    margin: 2em 0em;
 }
 
-.sec-e_Text {
-    width: 400px;
+
+.sec-f {
+    background: url(../img/section-z.webp) center top;
+    background-size: cover;
+    height: 85vh;
+}
+
+
+
+.sec-g  {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap:75px;
+}
+.sec-g .des {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0em 3em 1em 3em;
+    height: 15vh;
+}
+.sec-g .info {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    gap:15px;
+}
+.sec-g .info .bar {
+    height: 170px;
+    width: 1px;
+    background-color: white;
+}
+.sec-g .info .note {
+    font-size:13px;
+    font-weight: 300;
+}
+.sec-g .info .note span {
+    color: rgba(255, 255, 255, 0.37);
+}
+.sec-g .info .btns  {
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.sec-g .info .btns button {
+    font-size: 13px;
+    font-weight: 600;
+    width: max-content;
+    padding: 1.2em 1.5em;
+    border-width: 2px;
+
+}
+.sec-g i {
+cursor: pointer;
+font-size: 25px;
+}
+
+
+footer  {
+    display: flex;
+    align-items: end;
+    justify-content: center;
 }
 
 
