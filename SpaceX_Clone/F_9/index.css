@@ -227,6 +227,24 @@ h3 {
 .sec-e_Text p  {
     margin: 2em 0em;
 }
+@media(max-width:980px){
+    .sec-e {
+        background-color: rgba(0, 0, 0, 0.502);
+        background-blend-mode: overlay;
+    }
+.sec-e_Text {
+    font-size: smaller;
+}
+}
+@media(max-width:580px){
+    .sec-e {
+        padding-left: 1em;
+    }
+    .sec-e_Text {
+        width: 90vw;
+    }
+
+}
 
 
 .sec-f {
@@ -242,6 +260,7 @@ h3 {
     display: flex;
     flex-direction: column;
     gap:75px;
+    text-align: center;
 }
 .sec-g .des {
     display: flex;
@@ -280,11 +299,24 @@ h3 {
     width: max-content;
     padding: 1.2em 1.5em;
     border-width: 2px;
-
 }
 .sec-g i {
 cursor: pointer;
 font-size: 25px;
+}
+@media(max-width:670px){
+    .sec-g .des {
+        padding: 0em 1em;
+        font-size: smaller;
+    }
+}
+@media(max-width:530px){
+    .sec-g i {
+        align-self: flex-end;
+        }
+    .sec-g .info .btns  {
+        flex-direction: column;
+    }
 }
 
 
