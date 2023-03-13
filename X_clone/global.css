@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,800;1,900&display=swap');
+
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+/* Base Styles */
+a {
+    color:inherit
+}
+img {
+    max-width: 100%;
+}
+li {
+    cursor: pointer;
+}
+h2 {
+    font-weight: 300;
+    font-size: 20px;
+}
+h3 {
+    font-weight: 300;
+    font-size: 30px;
+}
+p {}
+
+
+/* UTIL */
+button {  
+
+}
+button::after {
+
+}
+button:hover {
+}
+button:hover::after {
+
+}
+
+
+.downArrow{
+
+}
+
+@keyframes down {
+    0%{
+        opacity: 0;
+        bottom: 20vh;
+    }
+    50%{
+        opacity: 1;
+        bottom: 18vh;
+    }
+    100%{
+        opacity: 0;
+        bottom: 18vh;
+
+    }
+}
+
+
+/* Layout */
+Header{}
+Footer{}
+.FooterSecondary{}
+.Hero-Full{}
+
+.HeroFull__text1{}
+/* .HeroFull__text1__title{}
+.HeroFull__text1__des{} */
+.HeroFull__text1__des--lg{}
+
+.HeroFull__text2{}
+.HeroFull__text2__title{}
+.HeroFull__text2__des{}
+
+.HeroFull__text3{}
+.HeroFull__text3__title{}
+.HeroFull__text3__des{}
+
+
+.CountContainer{}
+.CountContainer__detail{}
+.CountContainer__detail__number{}
+.CountContainer__detail__des{}
+
+
+.HeroSticky{}
+.HeroSticky__text{}
+/*
+.HeroSticky__text__options{}
+ .HeroSticky__info__title{}
+.HeroSticky__info__des{} */
+
+.Info{}
+.Info__details{}
+.Info__details__detail{}
+.Info__details__detail__prop{}
+.Info__details__detail__value{}
+.Detail__value--im{}
+.Detail__value--met{}
+
+
+.SbS1{}
+
+
+
+.VideoPlayer{}
+.VideoPlayer__close{}
+.VideoPlayer__text{}
+
+.SlideShow
+.Swiper{}
+
+
