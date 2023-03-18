@@ -11,6 +11,10 @@
 
 
 /* Base Styles */
+body {
+    font-family: poppins;
+    color:white;
+}
 a {
     color:inherit
 }
@@ -19,6 +23,7 @@ img {
 }
 li {
     cursor: pointer;
+    text-transform: uppercase;
 }
 h2 {
     font-weight: 300;
@@ -28,7 +33,9 @@ h3 {
     font-weight: 300;
     font-size: 30px;
 }
-p {}
+p {
+    line-height: 1.6em;
+}
 
 
 /* UTIL */
@@ -67,56 +74,80 @@ button:hover::after {
 
 
 /* Layout */
-Header{}
-Footer{}
-.FooterSecondary{}
-.Hero-Full{}
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    padding: 1.5em 3em;
+}
+.Header__Nav {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Header__Nav__List {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    gap:25px;
+}
+.Header__Logo {
+    width: 230px;
+    margin-left: 2em;
+}
+.Hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:4px;
+}
+.top,
+.mid,
+.bott {
+    background-color: white;
+    width: 20px;
+    height: 1px;
+}
+.Nav__List__Mobile{
+    position: fixed;
+    top:0;
+    right:-500px;
+    height: 100vh;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    flex-direction: column;
+    background-color: black;
+    padding: 2em 3em 0em 4em;
+}
+.Nav__List__Mobile--icon {
+    font-size: 20px;
+}
+.Nav__List__Mobile--link {
+    width: 250px;
+    font-size: 15px;
+    text-align: end;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.224);
+    padding: 1em 0em;
+}
+@media(max-width:1300px){
+    
+}
 
-.HeroFull__text1{}
-/* .HeroFull__text1__title{}
-.HeroFull__text1__des{} */
-.HeroFull__text1__des--lg{}
-
-.HeroFull__text2{}
-.HeroFull__text2__title{}
-.HeroFull__text2__des{}
-
-.HeroFull__text3{}
-.HeroFull__text3__title{}
-.HeroFull__text3__des{}
-
-
-.CountContainer{}
-.CountContainer__detail{}
-.CountContainer__detail__number{}
-.CountContainer__detail__des{}
-
-
-.HeroSticky{}
-.HeroSticky__text{}
-/*
-.HeroSticky__text__options{}
- .HeroSticky__info__title{}
-.HeroSticky__info__des{} */
-
-.Info{}
-.Info__details{}
-.Info__details__detail{}
-.Info__details__detail__prop{}
-.Info__details__detail__value{}
-.Detail__value--im{}
-.Detail__value--met{}
-
-
-.SbS1{}
 
 
 
-.VideoPlayer{}
-.VideoPlayer__close{}
-.VideoPlayer__text{}
 
-.SlideShow
-.Swiper{}
+
+
+
+
+footer{}
+.footer2{}
+
 
 
