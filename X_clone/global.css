@@ -121,21 +121,32 @@ header{
     align-items: end;
     justify-content: start;
     flex-direction: column;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.945);
     padding: 2em 3em 0em 4em;
+    transition: all .3s;
 }
 .Nav__List__Mobile--icon {
     font-size: 20px;
+    transition: all .2s;
+
 }
 .Nav__List__Mobile--link {
     width: 250px;
     font-size: 15px;
     text-align: end;
     border-bottom: 1px solid rgba(255, 255, 255, 0.224);
-    padding: 1em 0em;
+    padding: .5em 0em;
 }
 @media(max-width:1300px){
-    
+    .Nav__List2 li:nth-of-type(1) {
+        display: none;
+    }
+    .Hamburger {
+        position: fixed;
+        z-index: 0;
+        /* z-index: 2; */
+        margin-right: 20px;
+    }
 }
 
 
