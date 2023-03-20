@@ -14,6 +14,7 @@
 body {
     font-family: poppins;
     color:white;
+    overflow-x: hidden;
 }
 a {
     color:inherit
@@ -23,7 +24,10 @@ img {
 }
 li {
     cursor: pointer;
-    text-transform: uppercase;
+      text-transform: uppercase;
+}
+i {
+    cursor: pointer;
 }
 h2 {
     font-weight: 300;
@@ -40,36 +44,35 @@ p {
 
 /* UTIL */
 button {  
-
+    border: 2px solid white;
+    background: transparent;
+    color:inherit;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
 }
 button::after {
-
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 0%;
+    transition: all.3s;
+    z-index: -1;
+    
 }
 button:hover {
+    color:black
 }
 button:hover::after {
-
-}
-
-
-.downArrow{
-
-}
-
-@keyframes down {
-    0%{
-        opacity: 0;
-        bottom: 20vh;
-    }
-    50%{
-        opacity: 1;
-        bottom: 18vh;
-    }
-    100%{
-        opacity: 0;
-        bottom: 18vh;
-
-    }
+    top:unset;
+    bottom:0;
+    height: 100%;
 }
 
 
@@ -80,6 +83,9 @@ header{
     left:0;
     width: 100vw;
     padding: 1.5em 3em;
+    transition: 1s;
+    z-index: 2;
+    /* background-color: rgba(0, 0, 0, 0.945); add to other pages */
 }
 .Header__Nav {
     display:flex;
@@ -94,9 +100,30 @@ header{
     font-weight: 700;
     gap:25px;
 }
-.Header__Logo {
+.Header__Nav__List li {
+    position: relative;
+}
+.Header__Nav__List li::after {
+    content: '';
+    position: absolute;
+    bottom:0;
+    right:0;
+    width: 0%;
+    height: 1px;
+    background-color: white;
+    transition: .5s;
+}
+.Header__Nav__List li:hover::after {
+    right:unset;
+    left:0;
+    width: 100%;
+}
+.Header__Logo.Header__Logo {
     width: 230px;
     margin-left: 2em;
+}
+.Header__Logo.Header__Logo::after {
+    all:unset;
 }
 .Hamburger {
     display: flex;
@@ -141,11 +168,14 @@ header{
     .Nav__List2 li:nth-of-type(1) {
         display: none;
     }
-    .Hamburger {
-        position: fixed;
-        z-index: 0;
-        /* z-index: 2; */
-        margin-right: 20px;
+}
+@media(max-width:500px){
+    header{
+        padding: 1.5em 2em;
+    }
+    .Header__Logo {
+        width: 230px;
+        margin-left: 0em;
     }
 }
 
