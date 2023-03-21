@@ -9,17 +9,12 @@ header{
     /* background-color: rgba(0, 0, 0, 0.945); add to other pages */
 }
 .Header__Nav {
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flexbox(space-between,center)
 }
 .Header__Nav__List {
-    display:flex;
-    align-items: center;
-    justify-content: center;
+    @include flexbox(space-between,center,25px);
     font-size: 13px;
     font-weight: 700;
-    gap:25px;
 }
 .Header__Nav__List li {
     position: relative;
@@ -47,11 +42,7 @@ header{
     all:unset;
 }
 .Hamburger {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap:4px;
+    @include flexbox(center,center,4px,column)
 }
 .top,
 .mid,

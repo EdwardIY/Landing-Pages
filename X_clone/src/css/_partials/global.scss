@@ -10,12 +10,13 @@ $primary-font: poppins;
 
 // Layout
 
-@mixin flexbox($j:center,$a:center,$g:unset){
+@mixin flexbox($j:center,$a:center,$g:unset,$d:row){
     display: flex;
     flex-wrap: wrap;
     justify-content:$j;
     align-items:$a;
-    gap:$g
+    gap:$g;
+    flex-direction:$d
 }
 
 
