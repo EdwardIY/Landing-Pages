@@ -1,0 +1,12 @@
+footer.footer-primary{
+    @include flexbox;
+    padding: 0em 1em;
+    height: 20vh;
+    background-color: black;
+    font-size: 12px;
+    font-weight: 600;
+}
+.footer-primary--links {
+    @include flexbox(center,center,20px)
+
+}
