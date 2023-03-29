@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  font-family: poppins;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+i {
+  cursor: pointer;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+button {
+  border: 2px solid white;
+  background: transparent;
+  color: inherit;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  height: 0%;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+button:hover {
+  color: black;
+}
+
+button:hover::after {
+  top: unset;
+  bottom: 0;
+  height: 100%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 1.5em 3em;
+  transition: 1s;
+  z-index: 2;
+  /* background-color: rgba(0, 0, 0, 0.945); add to other pages */
+}
+
+.Header__Nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: unset;
+  flex-direction: row;
+}
+
+.Header__Nav__List {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  flex-direction: row;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.Header__Nav__List li {
+  position: relative;
+}
+
+.Header__Nav__List li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 1px;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.Header__Nav__List li:hover::after {
+  right: unset;
+  left: 0;
+  width: 100%;
+}
+
+.Header__Logo.Header__Logo {
+  width: 230px;
+  margin-left: 2em;
+}
+
+.Header__Logo.Header__Logo::after {
+  all: unset;
+}
+
+.Hamburger {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.top,
+.mid,
+.bott {
+  background-color: white;
+  width: 20px;
+  height: 1px;
+}
+
+.Nav__List__Mobile {
+  position: fixed;
+  top: 0;
+  right: -500px;
+  height: 100vh;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.945);
+  padding: 2em 3em 0em 4em;
+  transition: all 0.3s;
+}
+
+.Nav__List__Mobile--icon {
+  font-size: 20px;
+  transition: all 0.2s;
+}
+
+.Nav__List__Mobile--link {
+  width: 250px;
+  font-size: 15px;
+  text-align: end;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.224);
+  padding: 0.5em 0em;
+}
+
+@media (max-width: 1300px) {
+  .Nav__List2 li:nth-of-type(1) {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    padding: 1.5em 2em;
+  }
+  .Header__Logo {
+    width: 230px;
+    margin-left: 0em;
+  }
+}
+footer.footer-primary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: unset;
+  flex-direction: row;
+  padding: 0em 1em;
+  height: 20vh;
+  background-color: black;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.footer-primary--links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-direction: row;
+}
+
+.Hero {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: unset;
+  flex-direction: column;
+}
+
+.Hero__Title {
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.Hero__Note {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 5em;
+  font-weight: 300;
+}
+
+.FadeBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  animation-name: fade;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+    z-index: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+.Stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0px 150px;
+  flex-direction: row;
+  padding: 3em 0em;
+}
+
+.Stats__Stat {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: unset;
+  flex-direction: column;
+}
+
+.Stats__Stat--number {
+  height: 150px;
+  font-size: 120px;
+}
+
+.Stats__Stat--detail {
+  font-size: 20px;
+  text-transform: uppercase;
+}

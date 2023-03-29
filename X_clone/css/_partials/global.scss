@@ -9,7 +9,6 @@ $primary-font: poppins;
 @import './base';
 
 // Layout
-
 @mixin flexbox($j:center,$a:center,$g:unset,$d:row){
     display: flex;
     flex-wrap: wrap;
@@ -26,6 +25,9 @@ $primary-font: poppins;
 @import './header';
 @import './footer-primary';
 @import './footer-secondary';
+@import './hero';
+@import './fade';
+@import './numbers';
 
 
 

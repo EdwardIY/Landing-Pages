@@ -1,0 +1,30 @@
+// <section class="Stats">
+// <div class="Stats__Stat">
+//     <span class="Stats__Stat--number">212</span>
+//     <span class="Stats__Stat--detail">total launches</span>
+// </div>
+// <div class="Stats__Stat">
+//     <span class="Stats__Stat--number">212</span>
+//     <span class="Stats__Stat--detail">total launches</span>
+// </div>        <div class="Stats__Stat">
+//     <span class="Stats__Stat--number">212</span>
+//     <span class="Stats__Stat--detail">total launches</span>
+// </div>
+// </section>
+
+
+.Stats {
+    @include flexbox(center,center,0px 150px);
+    padding: 3em 0em;
+}
+.Stats__Stat{
+    @include flexbox(center,center,unset,column);
+}
+.Stats__Stat--number{
+    height: 150px;
+    font-size: 120px;
+}
+.Stats__Stat--detail{
+    font-size: 20px;
+    text-transform: uppercase;
+}

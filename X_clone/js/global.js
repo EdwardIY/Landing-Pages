@@ -61,3 +61,33 @@ function handleScrollDown(){
     header.style.top = '-10vh'
 }
 
+
+// Numbers
+
+const stats = document.getElementById('stats');
+const stat_1 = stats.children[0];
+const stat_2 = stats.children[1];
+const stat_3 = stats.children[2];
+
+window.addEventListener('scroll', handleScroll);
+
+function handleScroll(){
+    if (stats.getBoundingClientRect().top <= 560) {
+        incNumbers();
+        window.removeEventListener('scroll',handleScroll)
+    }
+        
+}
+function incNumbers() {
+        for (let i = 1; i <= 212; i++){
+            setTimeout(() => {
+                if (i <= 147) stat_3.children[0].textContent = i;
+                if (i <= 170) stat_2.children[0].textContent = i;
+                if (i <= 212) stat_1.children[0].textContent = i;
+    
+            }, i * 5)
+        }
+    
+
+}
+
