@@ -1,6 +1,24 @@
-@import './_partials/global.scss';
+@import './_partials/layout';
+
 
 .Hero {
     background: url(../img/falcon-9.webp) center center;
     background-size: cover;
+}
+
+.Model {
+    background: url(../img/falcon-9_lines.jpg) center center;
+    background-size: cover;
+    position: sticky;
+    top:0;
+    @include flexbox(center,flex-start,0px,column);
+    padding-left: 6em;
+}
+.Model__Note {
+    width: 475px;
+    font-size: 19px;
+    height: 1200px;
+    border:1px solid red;
+    margin-bottom: 10em;
+    max-height: none;
 }
