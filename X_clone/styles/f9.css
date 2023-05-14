@@ -15,13 +15,13 @@
   gap: 0px;
   flex-direction: column;
   padding-left: 6em;
+  opacity: 0.6;
 }
 
 .Model__Note {
   width: 475px;
-  font-size: 19px;
-  height: 1200px;
   border: 1px solid red;
-  margin-bottom: 10em;
-  max-height: none;
+  height: 900px;
+  margin-left: 5em;
+  margin-top: -25em;
 }

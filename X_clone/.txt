@@ -1,0 +1,5 @@
+- Create chart inside of modal
+
+- when des is almost off screen reveal the chart that is 
+in the modal and also change position of modal
+from sticky back to static
