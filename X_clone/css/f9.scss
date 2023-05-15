@@ -13,12 +13,47 @@
     top:0;
     @include flexbox(center,flex-start,0px,column);
     padding-left: 6em;
-    opacity: .6;
+    opacity: 1;
+    z-index: -1;
 }
 .Model__Note {
     width: 475px;
-    border:1px solid red;
+    // border:1px solid red;
     height: 900px;
     margin-left: 5em;
     margin-top: -25em;
+}
+.Model__Chart {
+    width: 600px;
+    @include flexbox(start,stretch,0px,column);
+    opacity: 0;
+
+}
+.Model__Chart__Name {
+    font-size: 22px;
+    font-weight:400;
+    text-transform: uppercase;
+    margin-bottom: -10px;
+}
+.Model__Chart__Title {
+    font-size: 40px;
+    font-weight:bold;
+    text-transform: uppercase;
+    margin-bottom: .8em
+}
+.Model__Chart__Info {
+    @include flexbox(start,stretch,15px,column);
+}
+.Chart__Info__Detail {
+    @include flexbox(space-between,center,0px,row);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.419);
+    padding-bottom: 1em;
+}
+.Info__Detail__Property {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight:bold;
+}
+.Info__Detail__Value {
+    font-weight: 500;
 }

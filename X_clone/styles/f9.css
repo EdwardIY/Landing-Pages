@@ -15,13 +15,68 @@
   gap: 0px;
   flex-direction: column;
   padding-left: 6em;
-  opacity: 0.6;
+  opacity: 1;
+  z-index: -1;
 }
 
 .Model__Note {
   width: 475px;
-  border: 1px solid red;
   height: 900px;
   margin-left: 5em;
   margin-top: -25em;
+}
+
+.Model__Chart {
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: stretch;
+  gap: 0px;
+  flex-direction: column;
+  opacity: 0;
+}
+
+.Model__Chart__Name {
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: -10px;
+}
+
+.Model__Chart__Title {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.8em;
+}
+
+.Model__Chart__Info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: stretch;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.Chart__Info__Detail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+  flex-direction: row;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.419);
+  padding-bottom: 1em;
+}
+
+.Info__Detail__Property {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.Info__Detail__Value {
+  font-weight: 500;
 }

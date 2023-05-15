@@ -44,10 +44,16 @@ function expand() {
 let prevScrollpos = window.scrollY;
 
 window.addEventListener('scroll', () => {
+
+    // Nav bar
     const currentScrollpos = window.scrollY;
     if (prevScrollpos > currentScrollpos) handleScrollUp();
     else if(prevScrollpos < currentScrollpos) handleScrollDown()
     prevScrollpos = currentScrollpos
+
+    // Model
+    let location = note.getBoundingClientRect().top;
+    
 })
 
 function handleScrollUp(){
@@ -87,7 +93,11 @@ function incNumbers() {
     
             }, i * 5)
         }
-    
-
 }
+
+// Model
+
+const note = document.getElementById('Model__Note');
+
+
 
