@@ -43,18 +43,7 @@ function expand() {
 
 let prevScrollpos = window.scrollY;
 
-window.addEventListener('scroll', () => {
 
-    // Nav bar
-    const currentScrollpos = window.scrollY;
-    if (prevScrollpos > currentScrollpos) handleScrollUp();
-    else if(prevScrollpos < currentScrollpos) handleScrollDown()
-    prevScrollpos = currentScrollpos
-
-    // Model
-    let location = note.getBoundingClientRect().top;
-    
-})
 
 function handleScrollUp(){
     header.style.opacity = 1;
@@ -95,9 +84,54 @@ function incNumbers() {
         }
 }
 
+
+
 // Model
 
 const note = document.getElementById('Model__Note');
+const chart = document.getElementById('Model__Chart');
+const model = document.getElementById('Model Hero');
+let revealed = false;
+let disabled = false;
+
+function changeModelState() {
+    chart.style.opacity = '1';
+    model.style.background = 'url(../img/falcon-9_model.jpg) center center'
+    model.style.backgroundSize = 'cover';
+    console.log('Changed')
+    revealed = true;
+
+}
+function revertModelState() {
+    chart.style.opacity = '0';
+    model.style.background = 'url(../img/falcon-9_lines.jpg) center center';
+    model.style.backgroundSize = 'cover';
+    console.log('Changed back')
+    revealed = false;
+}
+
+
+
+
+
+
+window.addEventListener('scroll', () => {
+
+    // Nav bar
+    const currentScrollpos = window.scrollY;
+    if (prevScrollpos > currentScrollpos) handleScrollUp();
+    else if(prevScrollpos < currentScrollpos) handleScrollDown()
+    prevScrollpos = currentScrollpos
+
+    // Model
+    let location = note.getBoundingClientRect().top;
+    if ((location < -150 && location > -330) && !revealed)
+        changeModelState()
+    else if ((location < 900 && location > -150) && revealed)
+        revertModelState()
+})
+
+
 
 
 
