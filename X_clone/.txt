@@ -1,1 +1,2 @@
 - landing hero is not respsive
+- Need  to activate icons in video sections

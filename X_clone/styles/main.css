@@ -287,3 +287,125 @@ footer.footer-primary {
   font-size: 20px;
   text-transform: uppercase;
 }
+
+.Model {
+  background: url(../img/falcon-9_lines.jpg) center center;
+  background-size: cover;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0px;
+  flex-direction: column;
+  padding-left: 6em;
+  opacity: 1;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.Model__Note {
+  width: 475px;
+  height: 1000px;
+  margin-left: 5em;
+  margin-top: -25em;
+}
+
+.Model__Chart {
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: stretch;
+  gap: 0px;
+  flex-direction: column;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.Model__Chart__Name {
+  font-size: 22px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: -10px;
+}
+
+.Model__Chart__Title {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.8em;
+}
+
+.Model__Chart__Info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: stretch;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.Chart__Info__Detail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+  flex-direction: row;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.419);
+  padding-bottom: 1em;
+}
+
+.Info__Detail__Property {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.Info__Detail__Value {
+  font-weight: 500;
+}
+
+.Info__Detail__Value span {
+  opacity: 0.4;
+}
+
+@media (max-width: 835px) {
+  .Model__Note {
+    width: 80vw;
+  }
+}
+@media (max-width: 775px) {
+  .Model {
+    padding-left: 0em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    flex-direction: column;
+  }
+  .Model__Chart {
+    width: 80vw;
+  }
+  .Model__Chart__Info {
+    background-color: rgba(0, 0, 0, 0.834);
+    padding: 15px;
+    border-radius: 2px;
+  }
+}
+@media (max-width: 500px) {
+  .Model__Note {
+    text-align: center;
+    width: 90%;
+    margin: 0em auto;
+  }
+  .Model__Chart {
+    width: 95vw;
+  }
+  .Info__Detail__Value {
+    font-size: 13px;
+  }
+}
