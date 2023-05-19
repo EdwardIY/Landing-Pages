@@ -87,7 +87,6 @@ function incNumbers() {
 
 
 // Model
-
 const note = document.getElementById('Model__Note');
 const chart = document.getElementById('Model__Chart');
 const model = document.getElementById('Model Hero');
@@ -109,6 +108,25 @@ function revertModelState() {
     console.log('Changed back')
     revealed = false;
 }
+
+
+// Video
+
+const video = document.getElementById('Video');
+const iFrame = document.getElementById('VideoPlayer__Video')
+const videPlayer = document.getElementById('VideoPlayer');
+const videoPlayerIcon = document.getElementById('VideoPlayer__Icon');
+video.addEventListener('click', () => {
+    videPlayer.style.top = '0vh'
+    iFrame.style.opacity = '1'
+    iFrame.src = 'https://www.youtube.com/embed/Z4TXCZG_NEY'
+})
+videoPlayerIcon.addEventListener('click', () => {
+    videPlayer.style.top = '100vh'
+    iFrame.style.opacity = '0'
+    iFrame.src = ''
+})
+
 
 
 
