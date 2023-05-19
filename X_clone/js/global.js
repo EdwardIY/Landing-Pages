@@ -88,7 +88,7 @@ function incNumbers() {
 
 // Model
 const note = document.getElementById('Model__Note');
-const chart = document.getElementById('Model__Chart');
+const chart = document.getElementById('Chart');
 const model = document.getElementById('Model Hero');
 let revealed = false;
 let disabled = false;

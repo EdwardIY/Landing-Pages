@@ -1,0 +1,96 @@
+.Chart {
+    margin-left: 6em;
+    width: 600px;
+    @include flexbox(start,stretch,0px,column);
+    transition: .5s;
+}
+.Chart__Name {
+    font-size: 22px;
+    font-weight:400;
+    text-transform: uppercase;
+    margin-bottom: -10px;
+}
+.Chart__Title {
+    font-size: 40px;
+    font-weight:bold;
+    text-transform: uppercase;
+    margin-bottom: .8em
+}
+.Chart__Note {
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 500;
+}
+.Chart__Note span {
+    white-space: pre;
+}
+.Chart__Note a{
+    opacity: .6;
+    transition:.4s
+}
+.Chart__Note:hover a{
+    opacity: 1
+}
+.Chart__Description {
+    width: 520px;
+    margin-bottom: 2em
+}
+.Chart__Info {
+    @include flexbox(start,stretch,15px,column);
+}
+.Chart__Info__Detail {
+    @include flexbox(space-between,center,0px,row);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.419);
+    padding-bottom: 1em;
+}
+.Info__Detail__Property {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight:bold;
+}
+.Info__Detail__Value {
+    font-weight: 500;
+}
+.Info__Detail__Value span {
+    opacity: .4;
+}
+@media(max-width:1260px){
+    .Chart__Description {
+        width: 40vw;
+    }
+    .Chart__Info {
+        width: 40vw;
+    }
+}
+@media(max-width:775px){
+    .Chart {
+        width: 80vw;
+        margin-left: 0em;
+    }
+    .Chart__Description {
+        width: 80%;
+
+    }
+    .Chart__Info {
+        width:initial
+    }
+    .Chart__Description,
+    .Chart__Info {
+        background-color: rgba(0, 0, 0, 0.834);
+        padding: 15px;
+        border-radius: 2px;
+    }
+}
+@media(max-width:500px){
+    .Chart {
+        width: 95vw;
+    }
+    .Chart__Description,
+    .Chart__Info {
+        width: initial;
+    }
+    .Info__Detail__Value {
+        font-size: 13px;
+    }
+}

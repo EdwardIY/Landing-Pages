@@ -3,6 +3,11 @@
   background-size: cover;
 }
 
+.Hero.F9 {
+  background: url(../img/falcon-9_lines.jpg) center center;
+  background-size: cover;
+}
+
 .Video {
   background: url(../img/f9_video_Bg.jpg) center center;
   background-size: cover;
@@ -108,5 +113,21 @@
     top: unset;
     bottom: 60px;
     text-align: center;
+  }
+}
+.Hero.Merlin {
+  background: url(../img//merlin.jpg) center center;
+  background-size: cover;
+  align-items: start;
+}
+
+@media (max-width: 775px) {
+  .Hero.Merlin {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    flex-direction: column;
   }
 }

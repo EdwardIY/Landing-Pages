@@ -1,58 +1,22 @@
 .Model {
-    background: url(../img/falcon-9_lines.jpg) center center;
-    background-size: cover;
     position: sticky;
     top:0;
     @include flexbox(center,flex-start,0px,column);
-    padding-left: 6em;
     opacity: 1;
     z-index: -1;
     transition: .5s;
 }
 .Model__Note {
     width: 475px;
-    // border:1px solid red;
     height: 1000px;
     margin-left: 5em;
     margin-top: -25em;
 }
-.Model__Chart {
-    width: 600px;
-    @include flexbox(start,stretch,0px,column);
+.Model .Chart {
     opacity: 0;
-    transition: .5s;
 }
-.Model__Chart__Name {
-    font-size: 22px;
-    font-weight:400;
-    text-transform: uppercase;
-    margin-bottom: -10px;
-}
-.Model__Chart__Title {
-    font-size: 40px;
-    font-weight:bold;
-    text-transform: uppercase;
-    margin-bottom: .8em
-}
-.Model__Chart__Info {
-    @include flexbox(start,stretch,15px,column);
-}
-.Chart__Info__Detail {
-    @include flexbox(space-between,center,0px,row);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.419);
-    padding-bottom: 1em;
-}
-.Info__Detail__Property {
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight:bold;
-}
-.Info__Detail__Value {
-    font-weight: 500;
-}
-.Info__Detail__Value span {
-    opacity: .4;
-}
+
+
 @media(max-width:835px){
     .Model__Note {
         width: 80vw;
@@ -60,28 +24,6 @@
 }
 @media(max-width:775px){
     .Model {
-        padding-left: 0em;
         @include flexbox(center,center,0px,column);
-    }
-    .Model__Chart {
-        width: 80vw;
-    }
-    .Model__Chart__Info {
-        background-color: rgba(0, 0, 0, 0.834);
-        padding: 15px;
-        border-radius: 2px;
-    }
-}
-@media(max-width:500px){
-    .Model__Note {
-        text-align: center;
-        width: 90%;
-        margin: 0em auto;
-    }
-    .Model__Chart {
-        width: 95vw;
-    }
-    .Info__Detail__Value {
-        font-size: 13px;
     }
 }

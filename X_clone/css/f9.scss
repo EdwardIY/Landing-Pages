@@ -7,6 +7,11 @@
 }
 
 
+.Hero.F9{
+    background: url(../img/falcon-9_lines.jpg) center center;
+    background-size: cover;
+}
+
 .Video {
     background: url(../img/f9_video_Bg.jpg) center center;
     background-size: cover;
@@ -96,5 +101,17 @@
         top:unset;
         bottom: 60px;
         text-align: center;
+    }
+}
+
+
+.Hero.Merlin {
+    background: url(../img//merlin.jpg) center center;
+    background-size: cover;
+    align-items: start;
+}
+@media(max-width:775px){
+    .Hero.Merlin {
+        @include flexbox(center,center,0px,column);
     }
 }

@@ -12,6 +12,7 @@ body {
   background-color: black;
   color: white;
   overflow-x: hidden;
+  font-size: 15px;
 }
 
 a {
@@ -289,8 +290,6 @@ footer.footer-primary {
 }
 
 .Model {
-  background: url(../img/falcon-9_lines.jpg) center center;
-  background-size: cover;
   position: sticky;
   top: 0;
   display: flex;
@@ -299,7 +298,6 @@ footer.footer-primary {
   align-items: flex-start;
   gap: 0px;
   flex-direction: column;
-  padding-left: 6em;
   opacity: 1;
   z-index: -1;
   transition: 0.5s;
@@ -312,7 +310,27 @@ footer.footer-primary {
   margin-top: -25em;
 }
 
-.Model__Chart {
+.Model .Chart {
+  opacity: 0;
+}
+
+@media (max-width: 835px) {
+  .Model__Note {
+    width: 80vw;
+  }
+}
+@media (max-width: 775px) {
+  .Model {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    flex-direction: column;
+  }
+}
+.Chart {
+  margin-left: 6em;
   width: 600px;
   display: flex;
   flex-wrap: wrap;
@@ -320,25 +338,49 @@ footer.footer-primary {
   align-items: stretch;
   gap: 0px;
   flex-direction: column;
-  opacity: 0;
   transition: 0.5s;
 }
 
-.Model__Chart__Name {
+.Chart__Name {
   font-size: 22px;
   font-weight: 400;
   text-transform: uppercase;
   margin-bottom: -10px;
 }
 
-.Model__Chart__Title {
+.Chart__Title {
   font-size: 40px;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 0.8em;
 }
 
-.Model__Chart__Info {
+.Chart__Note {
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.Chart__Note span {
+  white-space: pre;
+}
+
+.Chart__Note a {
+  opacity: 0.6;
+  transition: 0.4s;
+}
+
+.Chart__Note:hover a {
+  opacity: 1;
+}
+
+.Chart__Description {
+  width: 520px;
+  margin-bottom: 2em;
+}
+
+.Chart__Info {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
@@ -372,38 +414,39 @@ footer.footer-primary {
   opacity: 0.4;
 }
 
-@media (max-width: 835px) {
-  .Model__Note {
-    width: 80vw;
+@media (max-width: 1260px) {
+  .Chart__Description {
+    width: 40vw;
+  }
+  .Chart__Info {
+    width: 40vw;
   }
 }
 @media (max-width: 775px) {
-  .Model {
-    padding-left: 0em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0px;
-    flex-direction: column;
-  }
-  .Model__Chart {
+  .Chart {
     width: 80vw;
+    margin-left: 0em;
   }
-  .Model__Chart__Info {
+  .Chart__Description {
+    width: 80%;
+  }
+  .Chart__Info {
+    width: initial;
+  }
+  .Chart__Description,
+  .Chart__Info {
     background-color: rgba(0, 0, 0, 0.834);
     padding: 15px;
     border-radius: 2px;
   }
 }
 @media (max-width: 500px) {
-  .Model__Note {
-    text-align: center;
-    width: 90%;
-    margin: 0em auto;
-  }
-  .Model__Chart {
+  .Chart {
     width: 95vw;
+  }
+  .Chart__Description,
+  .Chart__Info {
+    width: initial;
   }
   .Info__Detail__Value {
     font-size: 13px;
