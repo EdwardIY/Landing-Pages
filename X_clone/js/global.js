@@ -128,7 +128,114 @@ videoPlayerIcon.addEventListener('click', () => {
 })
 
 
+// SlideShow
 
+const slidesContainer = document.getElementById('SlidShow__Slides');
+const prevIcon = document.getElementById('prevIcon');
+const nextIcon = document.getElementById('nextIcon');
+const slideNote = document.getElementById('slideNote');
+let slidePointer = 0;
+let notePointer = 0;
+let loaded = false;
+
+let images = [
+    'https://www.spacex.com/static/images/falcon-9/F9_1.jpg',
+    'https://www.spacex.com/static/images/falcon-9/F9_2.jpg',
+    'https://www.spacex.com/static/images/falcon-9/F9_3.jpg',
+    'https://www.spacex.com/static/images/falcon-9/F9_4.jpg'
+
+]
+let slides = new Array(images.length);
+let slideNotes = [
+    'Falcon 9 launches Dragon to the International Space Station from Launch Complex 39A',
+    'Falcon 9 first and second stages after separating in flight',
+    'Falcon 9 lifts off with its Iridium-5 payload',
+    'Falcon 9 lands on the droneship Just Read the Instructions'
+]
+
+
+images.forEach((img, i) => {
+    slidesContainer.innerHTML += `<div id='${'slide' + i}' class="Slides__IMG Hero" style="background:url(${img}) center center; left:${Number(i + '' + '00')}vw; background-size:cover;"></div>`;
+    slides[i] = (slidesContainer.lastElementChild)
+})
+slideNote.textContent = slideNotes[notePointer];
+
+
+prevIcon.addEventListener('click', prev)
+nextIcon.addEventListener('click',next)
+
+
+function prev() {
+    slidePointer--;
+    notePointer--;
+
+    if (!slides[slidePointer - 1]) { 
+        adjustReel(0);
+        updateSlide(100)
+    }
+    else updateSlide(100);
+    
+
+    
+}
+function next() {
+    slidePointer++;
+    notePointer++;
+    console.log(slidePointer,notePointer)
+    if (!slides[slidePointer + 1]) {
+        adjustReel(1);
+        updateSlide(-100)
+    }
+    else updateSlide(-100);
+}
+
+
+function updateSlide(direction) {
+    for (let child of slidesContainer.children) {
+        let value = child.style.left;
+        child.style.left = (+value.slice(0,-2) + direction) + 'vw'
+    }
+    slideNote.style.opacity = '0';
+
+    setTimeout(() => {
+        slideNote.textContent = slideNotes[notePointer];
+        slideNote.style.opacity = '1'
+    },700)
+    
+    
+}
+
+function adjustReel(value) {
+    if (value) {
+        for (let child of slidesContainer.children) {
+            if (child.id == slides[0].id) {
+                child.style.transition = 'initial';
+                child.style.left = '200vw';
+                setTimeout(() => child.style.transition = '1.4s')
+
+                slides.push(slides.shift())
+                slideNotes.push(slideNotes.shift())
+                break;
+            }
+        }
+        slidePointer--;
+        notePointer--;
+    } else {
+        for (let child of slidesContainer.children) {
+            if (child.id == slides[3].id) {
+                child.style.transition = 'initial';
+                child.style.left = '-300vw';
+                setTimeout(() => child.style.transition = '1.4s')
+
+                slides.unshift(slides.pop())
+                slideNotes.unshift(slideNotes.pop())
+                break;
+            }
+        }
+        slidePointer++;
+        notePointer++;
+    }
+}
 
 
 

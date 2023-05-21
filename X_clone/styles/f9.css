@@ -131,3 +131,47 @@
     flex-direction: column;
   }
 }
+.SlideShow {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0px;
+  flex-direction: column;
+}
+
+.SlideShow__Slides {
+  position: relative;
+  border: 10px solid green;
+  transition: 1s;
+}
+
+.Slides__IMG {
+  position: absolute;
+  transition: 1.4s;
+  border: 1px solid red;
+}
+
+.SlideShow__Controls {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px;
+  flex-direction: row;
+  bottom: 0px;
+  background-color: black;
+  width: 100%;
+  padding: 2em 3em;
+}
+
+.SlideShow__Controls--Icon {
+  font-size: 30px;
+}
+
+.SlideShow__Note {
+  font-size: 14px;
+  transition: 1s;
+}

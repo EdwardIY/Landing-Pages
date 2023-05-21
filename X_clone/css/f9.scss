@@ -48,13 +48,6 @@
         display: none;
     }
 }
-// @media(max-width:960px){
-//     .Video__Info{
-//         background: rgba(0, 0, 0, 0.619);
-//         padding: .5em;
-//         border-radius: 5px;
-//     }
-// }
 
 
 .VideoPlayer {
@@ -115,3 +108,36 @@
         @include flexbox(center,center,0px,column);
     }
 }
+
+
+.SlideShow {
+    position: relative;
+    @include flexbox(space-between,flex-start,0px,column)
+}
+.SlideShow__Slides {
+    position: relative;
+    border: 10px solid green;
+    transition: 1s;
+}
+.Slides__IMG {
+    position: absolute;
+    transition: 1.4s;
+    border: 1px solid red
+}
+.SlideShow__Controls{
+    position: absolute;
+    @include flexbox(space-between,center,0px,row);
+    bottom: 0px;
+    background-color: black;
+    width: 100%;
+    padding: 2em 3em;
+}
+.SlideShow__Controls--Icon {
+    font-size: 30px;
+}
+.SlideShow__Note {
+    font-size: 14px;
+    transition: 1s;
+}
+
+
