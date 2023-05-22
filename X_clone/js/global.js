@@ -134,8 +134,8 @@ const slidesContainer = document.getElementById('SlidShow__Slides');
 const prevIcon = document.getElementById('prevIcon');
 const nextIcon = document.getElementById('nextIcon');
 const slideNote = document.getElementById('slideNote');
-let slidePointer = 0;
-let notePointer = 0;
+let slidePointer = 1;
+let notePointer = 1;
 let loaded = false;
 
 let images = [
@@ -155,14 +155,28 @@ let slideNotes = [
 
 
 images.forEach((img, i) => {
-    slidesContainer.innerHTML += `<div id='${'slide' + i}' class="Slides__IMG Hero" style="background:url(${img}) center center; left:${Number(i + '' + '00')}vw; background-size:cover;"></div>`;
-    slides[i] = (slidesContainer.lastElementChild)
+    i++;
+    slidesContainer.innerHTML += `<div id='${'slide' + i}' class="Slides__IMG Hero" style="background:url(${img}) center center; left:${Number(i * 100 - 200)}vw; background-size:cover;"></div>`;
+    slides[i - 1] = (slidesContainer.lastElementChild)
 })
 slideNote.textContent = slideNotes[notePointer];
 
 
-prevIcon.addEventListener('click', prev)
-nextIcon.addEventListener('click',next)
+prevIcon.addEventListener('click', debounce(prev,1500))
+nextIcon.addEventListener('click', debounce(next, 1500))
+
+function debounce(work, delay) {
+    let ready = true;
+
+    return function () {
+        if (ready) {
+            work();
+            ready = false;
+            setTimeout(() => ready = true,delay)
+        }
+    }
+}
+
 
 
 function prev() {
@@ -175,13 +189,11 @@ function prev() {
     }
     else updateSlide(100);
     
-
-    
 }
 function next() {
     slidePointer++;
     notePointer++;
-    console.log(slidePointer,notePointer)
+
     if (!slides[slidePointer + 1]) {
         adjustReel(1);
         updateSlide(-100)
@@ -211,7 +223,7 @@ function adjustReel(value) {
             if (child.id == slides[0].id) {
                 child.style.transition = 'initial';
                 child.style.left = '200vw';
-                setTimeout(() => child.style.transition = '1.4s')
+                setTimeout(() => child.style.transition = '1.3s',0)
 
                 slides.push(slides.shift())
                 slideNotes.push(slideNotes.shift())
@@ -224,8 +236,8 @@ function adjustReel(value) {
         for (let child of slidesContainer.children) {
             if (child.id == slides[3].id) {
                 child.style.transition = 'initial';
-                child.style.left = '-300vw';
-                setTimeout(() => child.style.transition = '1.4s')
+                child.style.left = '-200vw';
+                setTimeout(() => child.style.transition = '1.3s',0)
 
                 slides.unshift(slides.pop())
                 slideNotes.unshift(slideNotes.pop())
