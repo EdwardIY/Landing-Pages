@@ -1,6 +1,7 @@
 .SlideShow {
     position: relative;
-    @include flexbox(space-between,flex-start,0px,column)
+    @include flexbox(space-between,flex-start,0px,column);
+    overflow-x: hidden;
 }
 .SlideShow__Slides {
     position: relative;
@@ -9,6 +10,7 @@
 .Slides__IMG {
     position: absolute;
     transition: 1.3s ease-out;
+    padding: 0;
 }
 .SlideShow__Controls{
     position: absolute;
@@ -24,4 +26,27 @@
 .SlideShow__Note {
     font-size: 14px;
     transition: 1s;
+}
+@media(max-width:820px){
+    .SlideShow__Note {
+        max-width: 300px;
+        text-align: center;
+    }
+}
+@media(max-width:490px){
+    .SlideShow__Note {
+        font-size: 12px;
+    }
+    .SlideShow__Controls{
+        padding: 2em 1em;
+    }
+    .SlideShow__Controls--Icon {
+        font-size: 15px;
+    }
+}
+@media(max-width:390px){
+    .SlideShow__Controls{
+        flex-direction: column;
+        gap:10px;
+    }
 }

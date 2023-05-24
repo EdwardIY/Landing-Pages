@@ -1,7 +1,7 @@
 .Hero {
     height: 100vh;
     width: 100vw;
-    @include flexbox(center,center,unset,column)
+    @include flexbox(center,center,unset,column);
 }
 .Hero__Title {
     font-size: 80px;
