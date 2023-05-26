@@ -18,7 +18,7 @@
                         <img src="./img/logo.png" alt="">
                     </a>
                 </li>
-                <li><a href="">falcon 9</a></li>
+                <li><a href="./F9.html">falcon 9</a></li>
                 <li><a href="">falcon heavy</a></li>
                 <li><a href="">dragon</a></li>
                 <li><a href="">starship</a></li>
@@ -62,7 +62,62 @@
             <span class="Stats__Stat--detail">total launches</span>
         </div>
     </section>
+    <section class="Model Hero FHeavy" id="Model Hero">
+        <video id="Model__Video" class="Model__Video" autoplay loop muted>
+            <source src="https://www.spacex.com/media/WebsiteFHFairings_Anim_Render_Desktop.webm" type="video/webm">
+          </video>
+        <div class="Chart" id="Chart">
+            <h2 class="Chart__Name">Falcon Heavy</h2>
+            <h3 class="Chart__Title">Overview</h3>
+            <div class="Chart__Info">
+                <span class="Chart__Info__Detail">
+                    <span class="Info__Detail__Property">height</span>
+                    <span class="Info__Detail__Value">70 m  <span>/ 229.6 ft</span></span>
+                </span>
+                <span class="Chart__Info__Detail">
+                    <span class="Info__Detail__Property">diameter</span>
+                    <span class="Info__Detail__Value">3.7 m  <span>/ 12 ft</span></span>
+                </span>
+                <span class="Chart__Info__Detail">
+                    <span class="Info__Detail__Property">mass</span>
+                    <span class="Info__Detail__Value">549,054 kg  <span>/ 1,207,920 lb</span></span>
+                </span>
+                <span class="Chart__Info__Detail">
+                    <span class="Info__Detail__Property">payload to gto</span>
+                    <span class="Info__Detail__Value">22,800 kg <span>/ 50,265 lb</span> </span>
+                </span>
+                <span class="Chart__Info__Detail">
+                    <span class="Info__Detail__Property">payload to mars</span>
+                    <span class="Info__Detail__Value">8,300 kg <span>/ 18,300 lb</span></span>
+                </span>
+                <span class="Chart__Info__Detail">
+                    <span class="Info__Detail__Property">payload to leo</span>
+                    <span class="Info__Detail__Value">8,300 kg <span>/ 18,300 lb</span></span>
+                </span>
+            </div>
+        </div>
+    </section>
+    <p class="Model__Note" id="Model__Note">
+        Falcon Heavy is composed of three reusable Falcon 9 nine-engine cores whose 27 Merlin engines together generate more than 5 million pounds of thrust at liftoff, equal to approximately eighteen 747 aircraft. As one of the world’s most powerful operational rockets, Falcon Heavy can lift nearly 64 metric tons (141,000 lbs) to orbit.
+        </p>
+        
+    <section class="Video Hero" id="Video">
+        <i class="bi bi-play-fill Video__Icon"></i>
+        <div class="Video__Info">
+            <h2 class="Video__Tag">video</h2>
+            <h3 class="Video__Title">Falcon Heavy First Flight</h3>
+        </div>
+    </section>
     
-    <script type = 'module' src="./js/global.js"></script>
+    <section class="VideoPlayer Hero" id="VideoPlayer">
+        <i class="bi bi-x-lg VideoPlayer__Icon" id="VideoPlayer__Icon"></i>
+        <iframe id='VideoPlayer__Video' class="VideoPlayer__Video" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <span class="VideoPlayer__Title">Falcon Heavy First Flight</span>
+    </section>
+
+    
+    
+    <div class="FadeBg"></div>
+    <script type = 'module' src="./js/FHeavy.js"></script>
 </body>
 </html>

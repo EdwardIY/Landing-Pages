@@ -3,3 +3,20 @@
   background-size: cover;
   text-align: center;
 }
+
+.Hero.FHeavy {
+  background: url(https://www.spacex.com/static/images/falcon-heavy/desktop/WebsiteFHFairings_Lines_Desktop.jpg) center center;
+  background-size: cover;
+}
+
+.Video {
+  background: url(https://www.spacex.com/static/images/backgrounds/fh_video.jpg) center center;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: start;
+  gap: 0px;
+  flex-direction: column;
+  position: relative;
+}

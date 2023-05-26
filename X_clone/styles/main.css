@@ -315,6 +315,17 @@ footer.footer-primary {
   transition: 0.5s;
 }
 
+.Model__Video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  opacity: 0;
+  transition: 0.5s;
+}
+
 .Model__Note {
   width: 475px;
   height: 1000px;
@@ -324,6 +335,7 @@ footer.footer-primary {
 
 .Model .Chart {
   opacity: 0;
+  transition: 0.5s;
 }
 
 @media (max-width: 835px) {
@@ -466,18 +478,6 @@ footer.footer-primary {
     font-size: 13px;
   }
 }
-.Video {
-  background: url(../img/f9_video_Bg.jpg) center center;
-  background-size: cover;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: end;
-  align-items: start;
-  gap: 0px;
-  flex-direction: column;
-  position: relative;
-}
-
 .Video__Info {
   display: flex;
   flex-wrap: wrap;

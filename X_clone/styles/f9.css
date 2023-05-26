@@ -9,6 +9,18 @@
   background-size: cover;
 }
 
+.Video {
+  background: url(../img/f9_video_Bg.jpg) center center;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: start;
+  gap: 0px;
+  flex-direction: column;
+  position: relative;
+}
+
 .Hero.Merlin {
   background: url(../img//merlin.jpg) center center;
   background-size: cover;
