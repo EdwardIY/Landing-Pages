@@ -4,14 +4,6 @@
   text-align: center;
 }
 
-@media (max-width: 420px) {
-  .Hero__Title {
-    font-size: 50px;
-  }
-  .Hero__Note {
-    font-size: initial;
-  }
-}
 .Hero.F9 {
   background: url(../img/falcon-9_lines.jpg) center center;
   background-size: cover;

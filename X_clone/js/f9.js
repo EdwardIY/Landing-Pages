@@ -1,1 +1,3 @@
-import '../css/f9.scss'
+import { init } from "./main.js";
+
+init('f9')

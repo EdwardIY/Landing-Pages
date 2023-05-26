@@ -1,3 +1,7 @@
+import { F9 } from "./asset.js"
+
+// Navigation
+
 const header = document.querySelector('header')
 const NavList_1 = document.getElementById('NavList_1')
 const NavList_2 = document.getElementById('NavList_2')
@@ -56,62 +60,79 @@ function handleScrollDown(){
     header.style.top = '-10vh'
 }
 
+window.addEventListener('scroll', () => {
 
-// Numbers
+    // Nav bar
+    const currentScrollpos = window.scrollY;
+    if (prevScrollpos > currentScrollpos) handleScrollUp();
+    else if(prevScrollpos < currentScrollpos) handleScrollDown()
+    prevScrollpos = currentScrollpos
 
+    // Numbers 
+     handleScroll()
+
+
+    // Model
+    let location = note.getBoundingClientRect().top;
+    if ((location < -150 && location > -330) && !revealed)
+        changeModelState()
+    else if ((location < 900 && location > -150) && revealed)
+        revertModelState()
+})
+
+
+// Numbers Setup
+
+let numbers; // Created in init
 const stats = document.getElementById('stats');
 const stat_1 = stats.children[0];
 const stat_2 = stats.children[1];
 const stat_3 = stats.children[2];
-
-window.addEventListener('scroll', handleScroll);
-
+let numsLoaded = false;
 function handleScroll(){
-    if (stats.getBoundingClientRect().top <= 560) {
+    if (stats.getBoundingClientRect().top <= 560 && !numsLoaded) {
+        numsLoaded = true;
         incNumbers();
-        window.removeEventListener('scroll',handleScroll)
-    }
-        
+    }  
 }
 function incNumbers() {
-        for (let i = 1; i <= 212; i++){
-            setTimeout(() => {
-                if (i <= 147) stat_3.children[0].textContent = i;
-                if (i <= 170) stat_2.children[0].textContent = i;
-                if (i <= 212) stat_1.children[0].textContent = i;
-    
-            }, i * 5)
-        }
+    for (let i = 1; i <= 212; i++){
+        setTimeout(() => {
+            if (i <= 147) stat_3.children[0].textContent = i;
+            if (i <= 170) stat_2.children[0].textContent = i;
+            if (i <= 212) stat_1.children[0].textContent = i;
+
+        }, i * 5)
+    }
 }
 
+// Model Setup
 
-
-// Model
+let modelLines;
+let modelFull;
 const note = document.getElementById('Model__Note');
 const chart = document.getElementById('Chart');
 const model = document.getElementById('Model Hero');
 let revealed = false;
-let disabled = false;
-
+// let disabled = false;
 function changeModelState() {
     chart.style.opacity = '1';
-    model.style.background = 'url(../img/falcon-9_model.jpg) center center'
+    model.style.background = `url(${modelFull}) center center`
     model.style.backgroundSize = 'cover';
-    console.log('Changed')
     revealed = true;
 
 }
 function revertModelState() {
     chart.style.opacity = '0';
-    model.style.background = 'url(../img/falcon-9_lines.jpg) center center';
+    model.style.background = `url(${modelLines}) center center`;
     model.style.backgroundSize = 'cover';
     console.log('Changed back')
     revealed = false;
 }
 
+// Video Setup
 
-// Video
-
+let videoSRC; // Created in init
 const video = document.getElementById('Video');
 const iFrame = document.getElementById('VideoPlayer__Video')
 const videPlayer = document.getElementById('VideoPlayer');
@@ -119,7 +140,7 @@ const videoPlayerIcon = document.getElementById('VideoPlayer__Icon');
 video.addEventListener('click', () => {
     videPlayer.style.top = '0vh'
     iFrame.style.opacity = '1'
-    iFrame.src = 'https://www.youtube.com/embed/Z4TXCZG_NEY'
+    iFrame.src = videoSRC;
 })
 videoPlayerIcon.addEventListener('click', () => {
     videPlayer.style.top = '100vh'
@@ -127,9 +148,11 @@ videoPlayerIcon.addEventListener('click', () => {
     iFrame.src = ''
 })
 
+// SlideShow Setup
 
-// SlideShow
-
+let slides; // Created in init
+let slideImages; // Created in init
+let slideNotes; // Created in init
 const slidesContainer = document.getElementById('SlidShow__Slides');
 const prevIcon = document.getElementById('prevIcon');
 const nextIcon = document.getElementById('nextIcon');
@@ -137,34 +160,6 @@ const slideNote = document.getElementById('slideNote');
 let slidePointer = 1;
 let notePointer = 1;
 let loaded = false;
-
-let images = [
-    'https://www.spacex.com/static/images/falcon-9/F9_1.jpg',
-    'https://www.spacex.com/static/images/falcon-9/F9_2.jpg',
-    'https://www.spacex.com/static/images/falcon-9/F9_3.jpg',
-    'https://www.spacex.com/static/images/falcon-9/F9_4.jpg'
-
-]
-let slides = new Array(images.length);
-let slideNotes = [
-    'Falcon 9 launches Dragon to the International Space Station from Launch Complex 39A',
-    'Falcon 9 first and second stages after separating in flight',
-    'Falcon 9 lifts off with its Iridium-5 payload',
-    'Falcon 9 lands on the droneship Just Read the Instructions'
-]
-
-
-images.forEach((img, i) => {
-    i++;
-    slidesContainer.innerHTML += `<div id='${'slide' + i}' class="Slides__IMG Hero" style="background:url(${img}) center center; left:${Number(i * 100 - 200)}vw; background-size:cover;"></div>`;
-    slides[i - 1] = (slidesContainer.lastElementChild)
-})
-slideNote.textContent = slideNotes[notePointer];
-
-
-prevIcon.addEventListener('click', debounce(prev,1500))
-nextIcon.addEventListener('click', debounce(next, 1500))
-
 function debounce(work, delay) {
     let ready = true;
 
@@ -176,9 +171,6 @@ function debounce(work, delay) {
         }
     }
 }
-
-
-
 function prev() {
     slidePointer--;
     notePointer--;
@@ -200,23 +192,6 @@ function next() {
     }
     else updateSlide(-100);
 }
-
-
-function updateSlide(direction) {
-    for (let child of slidesContainer.children) {
-        let value = child.style.left;
-        child.style.left = (+value.slice(0,-2) + direction) + 'vw'
-    }
-    slideNote.style.opacity = '0';
-
-    setTimeout(() => {
-        slideNote.textContent = slideNotes[notePointer];
-        slideNote.style.opacity = '1'
-    },700)
-    
-    
-}
-
 function adjustReel(value) {
     if (value) {
         for (let child of slidesContainer.children) {
@@ -248,25 +223,55 @@ function adjustReel(value) {
         notePointer++;
     }
 }
+function updateSlide(direction) {
+    for (let child of slidesContainer.children) {
+        let value = child.style.left;
+        child.style.left = (+value.slice(0,-2) + direction) + 'vw'
+    }
+    slideNote.style.opacity = '0';
+
+    setTimeout(() => {
+        slideNote.textContent = slideNotes[notePointer];
+        slideNote.style.opacity = '1'
+    },700)
+    
+    
+} 
+prevIcon.addEventListener('click', debounce(prev,1500))
+nextIcon.addEventListener('click', debounce(next, 1500))
 
 
 
 
-window.addEventListener('scroll', () => {
+export function init(page) {
 
-    // Nav bar
-    const currentScrollpos = window.scrollY;
-    if (prevScrollpos > currentScrollpos) handleScrollUp();
-    else if(prevScrollpos < currentScrollpos) handleScrollDown()
-    prevScrollpos = currentScrollpos
+    if (page == 'f9') {
+        numbers = F9.numbers;
+        slideImages = F9.slideImages;
+        console.log(slideImages.length)
+        modelLines = F9.modelImages[0];
+        modelFull = F9.modelImages[1];
+        videoSRC = F9.video;
+        slides = new Array(slideImages.length);
+        slideNotes = F9.slideNotes
+    }
 
-    // Model
-    let location = note.getBoundingClientRect().top;
-    if ((location < -150 && location > -330) && !revealed)
-        changeModelState()
-    else if ((location < 900 && location > -150) && revealed)
-        revertModelState()
-})
+    // Initialize SlideShow
+    
+    slideImages.forEach((img, i) => {
+        i++;
+        slidesContainer.innerHTML += `<div id='${'slide' + i}' class="Slides__IMG Hero" style="background:url(${img}) center center; left:${Number(i * 100 - 200)}vw; background-size:cover;"></div>`;
+        slides[i - 1] = (slidesContainer.lastElementChild)
+    })
+    slideNote.textContent = slideNotes[notePointer];
+}
+
+
+
+
+
+
+
 
 
 

@@ -241,6 +241,14 @@ footer.footer-primary {
   font-weight: 300;
 }
 
+@media (max-width: 420px) {
+  .Hero__Title {
+    font-size: 50px;
+  }
+  .Hero__Note {
+    font-size: initial;
+  }
+}
 .FadeBg {
   position: fixed;
   top: 0;
