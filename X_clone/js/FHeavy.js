@@ -5,4 +5,4 @@ Navigation_Feature();
 Numbers_Feature(FHeavy.numbers);
 Model_Feature();
 Video_Feature(FHeavy.video)
-SlideShow_Feature(new Array(FHeavy.modelImages.length),FHeavy.slideImages,FHeavy.slideNotes)
+SlideShow_Feature(new Array(FHeavy.slideImages.length),FHeavy.slideImages,FHeavy.slideNotes)

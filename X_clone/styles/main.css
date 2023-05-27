@@ -194,32 +194,61 @@ header {
     margin-left: 0em;
   }
 }
-footer.footer-primary {
+footer {
+  padding-top: 5em;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  gap: unset;
-  flex-direction: row;
-  padding: 0em 1em;
-  height: 20vh;
+  justify-content: center;
+  flex-direction: column;
   background-color: black;
-  font-size: 12px;
-  font-weight: 600;
+  gap: 3em;
+  font-size: 14px;
+  text-align: center;
 }
 
-.footer-primary--links {
+.Footer__Bar {
+  height: 150px;
+  width: 1px;
+  background-color: white;
+}
+
+.Footer__Buttons {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  gap: 20px;
-  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
 }
 
+footer button {
+  padding: 1.3em 1em;
+}
+
+.Footer__Links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 3em 0em;
+  font-size: 12px;
+}
+
+.Footer__Links a {
+  text-transform: uppercase;
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .Footer__Buttons {
+    flex-direction: column;
+  }
+  footer button {
+    width: 250px;
+  }
+}
 .Hero {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -324,6 +353,7 @@ footer.footer-primary {
   z-index: -2;
   opacity: 0;
   transition: 0.5s;
+  object-fit: cover;
 }
 
 .Model__Note {
@@ -528,6 +558,7 @@ footer.footer-primary {
   background: black;
   position: fixed;
   top: 100vh;
+  left: 0;
   justify-content: space-between;
   z-index: 2;
   padding: 1em 0em;
@@ -640,5 +671,57 @@ footer.footer-primary {
   .SlideShow__Controls {
     flex-direction: column;
     gap: 10px;
+  }
+}
+footer {
+  padding-top: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+  gap: 3em;
+  font-size: 14px;
+  text-align: center;
+}
+
+.Footer__Bar {
+  height: 150px;
+  width: 1px;
+  background-color: white;
+}
+
+.Footer__Buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer button {
+  padding: 1.3em 1em;
+}
+
+.Footer__Links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 3em 0em;
+  font-size: 12px;
+}
+
+.Footer__Links a {
+  text-transform: uppercase;
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .Footer__Buttons {
+    flex-direction: column;
+  }
+  footer button {
+    width: 250px;
   }
 }

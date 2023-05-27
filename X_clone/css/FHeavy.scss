@@ -20,3 +20,67 @@
     @include flexbox(end,start,0px,column);
     position: relative;
 }
+
+
+.SBS--type1{
+  background-color: black;
+  padding: 0em 6em;
+  gap: 3em;
+
+}
+.SBS--type1__Left{
+  width: 55%;
+}
+.SBS--type1__Left video{
+  width: 100%;
+}
+.SBS--type1__Right{
+  width: 45%;
+}
+.SBS--type1__Right__Title {
+  font-size: 40px;
+  margin-bottom: 1em;
+  max-width: 100%;
+  width: 320px;
+  line-height: 1.2em;
+
+}
+.SBS--type1__Right__Description {
+  max-width: 100%;
+  width: 500px;
+}
+@media(max-width:1000px){
+  .SBS--type1 {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 0em 1em;
+    height: max-content;
+  }
+  .SBS--type1__Left{
+    width: 100%;
+  }
+  .SBS--type1__Right__Title {
+    font-size: 30px;  
+  }
+  .SBS--type1__Right{
+    width: 100%;
+    padding-left: 9em;
+  }
+}
+@media(max-width:640px){
+  .SBS--type1__Right{
+    padding-left: 0em;
+  }
+}
+
+
+.Hero.Merlin {
+  background: url(../img//merlin.jpg) center center;
+  background-size: cover;
+  align-items: start;
+}
+@media(max-width:775px){
+  .Hero.Merlin {
+      @include flexbox(center,center,0px,column);
+  }
+}

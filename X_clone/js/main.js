@@ -45,7 +45,7 @@ export function Navigation_Feature() {
     function handleScrollUp(){
         header.style.opacity = 1;
         header.style.top = '0vh'
-        // header.style.background = 'rgba(0, 0, 0, 0.945)'
+        header.style.background = 'rgba(0, 0, 0, 0.945)'
     }
     function handleScrollDown(){
         header.style.opacity = 0;
@@ -232,9 +232,10 @@ function updateSlide(direction) {
 prevIcon.addEventListener('click', debounce(prev,1500))
     nextIcon.addEventListener('click', debounce(next, 1500))
 
+    console.log(slideImages,slides)
 slideImages.forEach((img, i) => {
         i++;
-        slidesContainer.innerHTML += `<div id='${'slide' + i}' class="Slides__IMG Hero" style="background:url(${img}) center center; left:${Number(i * 100 - 200)}vw; background-size:cover;"></div>`;
+        slidesContainer.innerHTML += `<div id='${'slide' + i}' class="Slides__IMG Hero" style="background:url(${img}) center center; left:${Number(i * 100 - 200)}vw; background-size:cover;width:100vw"></div>`;
         slides[i - 1] = (slidesContainer.lastElementChild)
     })
     slideNote.textContent = slideNotes[notePointer];
