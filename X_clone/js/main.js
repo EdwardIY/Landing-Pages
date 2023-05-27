@@ -124,15 +124,17 @@ window.addEventListener('scroll', () => {
 
 
 // Video 
-export function Video_Feature(videoSRC) {
-const video = document.getElementById('Video');
+export function Video_Feature() {
+const video = document.querySelectorAll('.Play');
 const iFrame = document.getElementById('VideoPlayer__Video')
 const videPlayer = document.getElementById('VideoPlayer');
 const videoPlayerIcon = document.getElementById('VideoPlayer__Icon');
-video.addEventListener('click', () => {
-    videPlayer.style.top = '0vh'
-    iFrame.style.opacity = '1'
-    iFrame.src = videoSRC;
+    video.forEach((vid) => {
+        vid.addEventListener('click', () => {
+            videPlayer.style.top = '0vh'
+            iFrame.style.opacity = '1'
+            iFrame.src = vid.dataset.videoUrl;
+    })
 })
 videoPlayerIcon.addEventListener('click', () => {
     videPlayer.style.top = '100vh'

@@ -21,7 +21,7 @@
     font-size: 60px;
     transition: .5s;
 }
-.Video:hover .Video__Icon {
+.Video__Icon:hover  {
     transform: scale(.7)
 }
 @media(max-width:870px){

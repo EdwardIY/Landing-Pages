@@ -17,7 +17,6 @@ export const F9  = {
 }
 export const FHeavy = {
     numbers: [6,11,8],
-    modelImages: ['https://www.spacex.com/static/images/falcon-heavy/desktop/WebsiteFHFairings_Lines_Desktop.jpg', 'https://www.spacex.com/static/images/falcon-heavy/desktop/WebsiteFHS1_Render_Desktop.jpg'],
     slideImages:[
         'https://www.spacex.com/static/images/falcon-heavy/FH_1.jpg',
         'https://www.spacex.com/static/images/falcon-heavy/FH_2.jpg',
@@ -30,5 +29,20 @@ export const FHeavy = {
         'Falcon Heavy lifts off with its Iridium-5 payload',
         'Falcon Heavy lands on the droneship Just Read the Instructions'
     ],
-    video:'https://www.youtube.com/embed/A0FZIwabctw'
+    
+}
+export const Dragon = {
+    numbers: [40,35,17],
+    slideImages:[
+        'https://www.spacex.com/static/images/dragon/refresh/DRAGON_DM2_LC39A_3840x2560.jpg',
+        'https://www.spacex.com/static/images/dragon/refresh/DRAGON_DRAGON+F9_3840x2560.jpg',
+        'https://www.spacex.com/static/images/dragon/refresh/DRAGON_DRAGON+ISS_3840x2025.jpg',
+        'https://www.spacex.com/static/images/dragon/refresh/DRAGON_CRS-22_3840x2560_Desktop.jpg',
+    ],
+    slideNotes: [
+        'Dragon launches Dragon to the International Space Station from Launch Complex 3A',
+        'Dragon first and second stages after separating in flight',
+        'Dragon lifts off with its Iridium-5 payload',
+        'Dragon lands on the droneship Just Read the Instructions'
+    ],
 }

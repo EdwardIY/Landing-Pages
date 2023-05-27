@@ -4,5 +4,5 @@ import { Navigation_Feature,Numbers_Feature,Model_Feature, Video_Feature,SlideSh
 Navigation_Feature();
 Numbers_Feature(FHeavy.numbers);
 Model_Feature();
-Video_Feature(FHeavy.video)
+Video_Feature()
 SlideShow_Feature(new Array(FHeavy.slideImages.length),FHeavy.slideImages,FHeavy.slideNotes)
