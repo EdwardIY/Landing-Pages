@@ -81,7 +81,7 @@ header {
   left: 0;
   width: 100vw;
   padding: 1.5em 3em;
-  transition: 1s;
+  transition: opacity 1s, transform 1s;
   z-index: 2;
   /* background-color: rgba(0, 0, 0, 0.945); add to other pages */
 }
@@ -181,6 +181,9 @@ header {
 }
 
 @media (max-width: 1300px) {
+  #NavList_1 li + li {
+    display: none;
+  }
   .Nav__List2 li:nth-of-type(1) {
     display: none;
   }
@@ -195,7 +198,6 @@ header {
   }
 }
 footer {
-  padding-top: 5em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -620,6 +622,11 @@ footer button {
   transition: 1s;
 }
 
+.SlideShow__Note {
+  max-width: 60%;
+  text-align: center;
+}
+
 .Slides__IMG {
   position: absolute;
   transition: 1.3s ease-out;
@@ -673,7 +680,6 @@ footer button {
   }
 }
 footer {
-  padding-top: 5em;
   display: flex;
   align-items: center;
   justify-content: center;

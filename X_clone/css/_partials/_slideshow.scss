@@ -7,6 +7,10 @@
     position: relative;
     transition: 1s;
 }
+.SlideShow__Note {
+    max-width: 60%;
+    text-align: center;
+}
 .Slides__IMG {
     position: absolute;
     transition: 1.3s ease-out;

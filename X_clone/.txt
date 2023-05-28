@@ -1,3 +1,4 @@
 - landing hero is not respsive
 - Need  to activate icons in video sections
 - Rough finish of next feature now start on prev
+- video title is not dynamic :(

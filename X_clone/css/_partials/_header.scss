@@ -4,7 +4,7 @@ header{
     left:0;
     width: 100vw;
     padding: 1.5em 3em;
-    transition: 1s;
+    transition: opacity 1s, transform 1s;
     z-index: 2;
     /* background-color: rgba(0, 0, 0, 0.945); add to other pages */
 }
@@ -77,6 +77,9 @@ header{
     padding: .5em 0em;
 }
 @media(max-width:1300px){
+    #NavList_1 li + li {
+        display: none;
+    }
     .Nav__List2 li:nth-of-type(1) {
         display: none;
     }

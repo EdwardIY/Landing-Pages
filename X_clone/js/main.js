@@ -25,15 +25,21 @@ export function Navigation_Feature() {
         MobileNavList.style.right = '-500px'
     })
     function collapse() {
+        const pages = [null,'./F9.html','./FHeavy.html','./Dragon.html','./StarS.html']
         for (let i = 1; i < NavList_1.children.length; i++){
-            let link = document.createElement('li') 
-            link.className = 'Nav__List__Mobile--link'
+            let li = document.createElement('li') 
+            li.className = 'Nav__List__Mobile--link'
+
+            let link = document.createElement('a') 
+            link.href = pages[i]
             link.textContent = NavList_1.children[i].children[0].textContent
+
+            li.appendChild(link)
     
-            MobileNavList.appendChild(link)
+            MobileNavList.appendChild(li)
             NavList_1.children[i].style.display = 'none'
         }
-        console.log(MobileNavList.children)
+        console.log(MobileNavList.childNodes)
     }
     
     function expand() {
@@ -44,12 +50,12 @@ export function Navigation_Feature() {
     }
     function handleScrollUp(){
         header.style.opacity = 1;
-        header.style.top = '0vh'
+        header.style.transform = 'translateY(0vh)'
         header.style.background = 'rgba(0, 0, 0, 0.945)'
     }
     function handleScrollDown(){
         header.style.opacity = 0;
-        header.style.top = '-10vh'
+        header.style.transform = 'translateY(-10vh)'
     }
     window.addEventListener('scroll', () => {
         const currentScrollpos = window.scrollY;

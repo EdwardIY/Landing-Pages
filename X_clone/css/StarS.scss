@@ -1,0 +1,92 @@
+@import './_partials/layout';
+
+
+.Hero.Landing {
+    background: url(https://www.spacex.com/vehicles/starship/assets/images/Starhip_website-crop20230126_dji_0199_01.jpg) center center;
+    background-size: cover;
+    text-align: center;
+}
+
+
+.Hero.StarShip{
+    background: url(https://www.spacex.com/vehicles/starship/assets/images/WebsiteStarship_Render_Desktop.jpg) center center;
+    background-size: cover;
+}
+.Model__Note {
+    height: 1200px;
+    margin-top: -75em;
+}
+
+
+.Video {
+    background: url(https://www.spacex.com/vehicles/starship/assets/images/capabilities/STARSHIP_CAPABILITIES_StarshipAnimation_Desktop.jpg) center center;
+    background-size: cover;
+    @include flexbox(end,start,0px,column);
+    position: relative;
+}
+
+
+.SlideShow__Controls{
+    position: absolute;
+    @include flexbox(center,center,5em,row);
+    bottom: 5em;
+    background-color: transparent;
+    width: 100%;
+    padding: 2em 3em;
+}
+.SlideShow__Note {
+    position: absolute;
+    max-width: 50%;
+    top:-30em;
+    left:5em;
+    background-color: rgba(0, 0, 0, 0.766);
+    padding: .8em;
+    border-radius: 5px;
+}
+
+
+.SectionP {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+}
+.SectionP.StarBase {
+    background: url(https://www.spacex.com/vehicles/starship/assets/images/STARSHIP_STARBASE_Desktop.jpg) center center;
+    background-size: cover;
+}
+.SectionP__Video {
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.SectionP__Info{
+    margin-left: 6em;
+    margin-bottom: 10em;
+}
+.SectionP__Info__Title{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.SectionP__Info__Description {
+    max-width:450px;
+    margin:2em 0em;
+}
+.SectionP__Info button{
+    padding: 1.3em 3em
+}
+
+footer {
+    padding-top: 8em;
+}
+
+
+
+
+
