@@ -135,11 +135,13 @@ const video = document.querySelectorAll('.Play');
 const iFrame = document.getElementById('VideoPlayer__Video')
 const videPlayer = document.getElementById('VideoPlayer');
 const videoPlayerIcon = document.getElementById('VideoPlayer__Icon');
+const videoPlayerTitle = document.getElementById('VideoPlayer__Title')
     video.forEach((vid) => {
         vid.addEventListener('click', () => {
             videPlayer.style.top = '0vh'
             iFrame.style.opacity = '1'
             iFrame.src = vid.dataset.videoUrl;
+            videoPlayerTitle.textContent = vid.dataset.videoplayerTitle;
     })
 })
 videoPlayerIcon.addEventListener('click', () => {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>XCLONE - Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/Home.css">
@@ -46,9 +46,9 @@
 
     <section class="sec-1">
         <div class="Section__Info">
-            <h2>RECENT LAUNCH</h2>
-            <h3>SES-18 AND SES-19 MISSION</h3>
-            <button>rewatch</button>
+            <h2>DRAGON TO RETURN TO EARTH</h2>
+            <h3>AX-2 MISSION</h3>
+            <button class="Play" data-video-url='https://www.youtube.com/embed/wTLmuhsMYMM'>watch</button>
         </div>
         <i class="bi bi-chevron-down downArrow"></i>
     </section>
@@ -56,17 +56,17 @@
     <section class="sec-2">
         <div class="Section__Info">
             <h2>RECENT LAUNCH</h2>
-            <h3>STARLINK MISSION</h3>
-            <button>rewatch</button>
+            <h3>ARABSAT BADR-8 MISSION</h3>
+            <button class="Play" data-video-url='https://www.youtube.com/embed/lBJ9uWdCLRI'>rewatch</button>
         </div>
         <i class="bi bi-chevron-down downArrow"></i>
     </section>
 
     <section class="sec-3">
         <div class="Section__Info">
-            <h2>RECENT LAUNCH</h2>
-            <h3>CRS-27 MISSION</h3>
-            <button>rewatch</button>
+            <h2>UPCOMING LAUNCH</h2>
+            <h3>STARLINK MISSION</h3>
+            <button class="Play" data-video-url='https://www.youtube.com/embed/EfJxpU0CLNI'>watch</button>
         </div>
         <i class="bi bi-chevron-down downArrow"></i>
     </section>
@@ -75,16 +75,22 @@
         <div class="Section__Info">
             <h2>RECENT LAUNCH</h2>
             <h3>CREW-5 MISSION</h3>
-            <button>rewatch</button>
+            <button class="Play" data-video-url='https://www.youtube.com/embed/5EwW8ZkArL4'>rewatch</button>
         </div>
         <i class="bi bi-chevron-down downArrow"></i>
     </section>
-
+    
     <section class="sec-5">
         <div class="Section__Info">
             <h3>STARSHIP UPDATE</h3>
             <button>learn more</button>
         </div>
+    </section>
+
+    <section class="VideoPlayer Hero" id="VideoPlayer">
+        <i class="bi bi-x-lg VideoPlayer__Icon" id="VideoPlayer__Icon"></i>
+        <iframe id='VideoPlayer__Video' class="VideoPlayer__Video" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <span id="VideoPlayer__Title" class="VideoPlayer__Title"></span>
     </section>
 
     <footer>

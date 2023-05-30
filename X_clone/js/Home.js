@@ -1,3 +1,4 @@
-import { Navigation_Feature,} from "./main.js";
+import { Navigation_Feature,Video_Feature} from "./main.js";
 
 Navigation_Feature();
+Video_Feature();
